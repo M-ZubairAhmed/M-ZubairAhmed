@@ -37,11 +37,11 @@ export const Heading3Text = styled.h3`
   text-align: ${props => (props.centerText ? 'center' : 'inherit')};
 `
 
-export const SocialIcons = styled.a`
+export const SocialIcon = styled.a`
   margin-left: 30px;
   margin-right: 30px;
-  color: #bfbfbf;
+  color: ${greyColor[2]};
   :hover {
-    color: #e5e5e5;
+    color: ${greyColor[3]};
   }
 `
