@@ -7,12 +7,14 @@ import 'semantic-ui-css/semantic.min.css'
 import myPicture from '../data/avatar.jpeg'
 import myProjects from '../data/projects'
 import myOpensource from '../data/opensource'
+import myBlogs from '../data/blogs'
 
 import { Container, Card, Heading1Text, Heading2Text, Heading3Text } from '../utils/common-styles'
 import SocialIcons from '../components/social-icons'
 import SkillIcons from '../components/skill-icons'
 import ProjectCard from '../components/projects-card'
 import OpensourceCard from '../components/opensource-card'
+import BlogsCard from '../components/blogs-card'
 
 export default () => (
   <Container>
@@ -56,6 +58,15 @@ export default () => (
           .map(opensource => <OpensourceCard key={opensource.repositoryName} {...opensource} />)}
       </Item.Group>
       <Link to="/opensources">
+        <Heading3Text centerText>VIEW MORE</Heading3Text>
+      </Link>
+    </Card>
+    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+      <Heading3Text mb={[2, 4]}>BLOG POSTS</Heading3Text>
+      <Item.Group divided>
+        {myBlogs.slice(0, 3).map(blog => <BlogsCard key={blog.title} {...blog} />)}
+      </Item.Group>
+      <Link to="/blogs">
         <Heading3Text centerText>VIEW MORE</Heading3Text>
       </Link>
     </Card>
