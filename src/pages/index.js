@@ -49,13 +49,13 @@ export default () => (
       </Link>
     </Card>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
-      <Heading3Text mb={[2, 4]}>OPEN SOURCE</Heading3Text>
+      <Heading3Text mb={[2, 4]}>OPEN SOURCES</Heading3Text>
       <Item.Group divided>
         {myOpensource
           .slice(0, 3)
           .map(opensource => <OpensourceCard key={opensource.repositoryName} {...opensource} />)}
       </Item.Group>
-      <Link to="/opensource">
+      <Link to="/opensources">
         <Heading3Text centerText>VIEW MORE</Heading3Text>
       </Link>
     </Card>

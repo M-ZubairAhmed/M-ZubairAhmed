@@ -10,7 +10,7 @@ export default () => (
   <Container>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
       <Heading3Text primary mb={[2, 4]}>
-        OPEN SOURCE
+        OPEN SOURCES
       </Heading3Text>
       <Item.Group divided>
         {myOpensource.map(opensource => (
