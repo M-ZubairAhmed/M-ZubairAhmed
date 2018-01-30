@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { space } from 'styled-system'
-import { textAlign } from 'styled-system'
 
 const greyColor = ['#404040', '#7F7F7F', '#BFBFBF', '#E5E5E5']
 
@@ -38,14 +37,11 @@ export const Heading3Text = styled.h3`
   text-align: ${props => (props.centerText ? 'center' : 'inherit')};
 `
 
-export const LinkButton = styled.a`
-  ${textAlign};
-  ${space};
-  color: ${greyColor[2]};
-  font-size: 1.3rem;
-  text-align: ${props => (props.centerText ? 'center' : 'inherit')};
-  cursor: pointer;
+export const SocialIcons = styled.a`
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #bfbfbf;
   :hover {
-    color: ${greyColor[1]};
+    color: #e5e5e5;
   }
 `

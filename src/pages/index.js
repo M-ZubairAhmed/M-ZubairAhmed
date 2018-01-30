@@ -1,14 +1,12 @@
 import React from 'react'
-import { Item, Button, Image, Header } from 'semantic-ui-react'
-import styled from 'styled-components'
+import { Item, Image } from 'semantic-ui-react'
 import { Flex, Box } from 'grid-styled'
 import Link from 'gatsby-link'
+import 'semantic-ui-css/semantic.min.css'
 
 import displayPic from '../data/avatar.jpeg'
 import myProjects from '../data/projects'
-import 'semantic-ui-css/semantic.min.css'
-
-import { JavascriptIcon, ReactIcon, GitIcon, WebpackIcon, BabelIcon } from '../utils/devIcons'
+import myOpensource from '../data/opensource'
 import {
   githubLink,
   linkedinLink,
@@ -18,6 +16,18 @@ import {
   youtubeLink,
   mediumLink,
 } from '../data/socialLinks'
+
+import { JavascriptIcon, ReactIcon, GitIcon, WebpackIcon, BabelIcon } from '../utils/devIcons'
+import {
+  Container,
+  Card,
+  Heading1Text,
+  Heading2Text,
+  Heading3Text,
+  SocialIcons,
+} from '../utils/common-styles'
+import ProjectCard from '../components/projects-card'
+import OpensourceCard from '../components/opensource-card'
 import Github from 'react-icons/lib/go/mark-github'
 import Linkedin from 'react-icons/lib/ti/social-linkedin'
 import Twitter from 'react-icons/lib/ti/social-twitter'
@@ -25,22 +35,6 @@ import Youtube from 'react-icons/lib/ti/social-youtube'
 import Medium from 'react-icons/lib/fa/medium'
 import Stackoverflow from 'react-icons/lib/fa/stack-overflow'
 import Skype from 'react-icons/lib/fa/skype'
-import ProjectCard from '../components/projects-card'
-import { Container, Card, Heading1Text, Heading2Text, Heading3Text, LinkButton } from '../utils/common-styles'
-
-const TypeText = styled(Header)`
-  letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};
-  font-style: ${props => (props.italicized ? 'italic' : 'normal')};
-`
-
-const SocialIcons = styled.a`
-  margin-left: 30px;
-  margin-right: 30px;
-  color: #bfbfbf;
-  :hover {
-    color: #e5e5e5;
-  }
-`
 
 export default () => (
   <Container>
@@ -77,8 +71,8 @@ export default () => (
     </Card>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
       <Heading3Text primary centerText>
-        A self taught developer with keen interest to keep exploring new technologies. An avid open source contributor.
-        Have been developing web and mobile applications.
+        A self taught developer with keen interest to keep exploring new technologies. An avid open
+        source contributor. Have been developing web and mobile applications.
       </Heading3Text>
       <Flex direction={['column', 'row']}>
         <Box width={(1, 1 / 5)}>
@@ -95,13 +89,20 @@ export default () => (
     </Card>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
       <Heading3Text mb={[2, 4]}>PROJECTS</Heading3Text>
-      <Item.Group divided>{myProjects.map(project => <ProjectCard {...project} key={project.url} />)}</Item.Group>
+      <Item.Group divided>
+        {myProjects.slice(0, 3).map(project => <ProjectCard {...project} key={project.url} />)}
+      </Item.Group>
       <Link to="/projects">
         <Heading3Text centerText>VIEW MORE</Heading3Text>
       </Link>
     </Card>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
       <Heading3Text mb={[2, 4]}>OPEN SOURCE</Heading3Text>
+      <Item.Group divided>
+        {myOpensource
+          .slice(0, 3)
+          .map(opensource => <OpensourceCard key={opensource.repositoryName} {...opensource} />)}
+      </Item.Group>
       <Link to="/opensource">
         <Heading3Text centerText>VIEW MORE</Heading3Text>
       </Link>

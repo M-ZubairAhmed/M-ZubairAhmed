@@ -1,72 +1,78 @@
-const opensourceData = [
+const myOpensource = [
   {
-    repoName: 'Facebook/React',
-    desc: 'A declarative, efficient, and flexible JavaScript library for building user interfaces',
-    repoPRs: [
+    repositoryName: 'Facebook/React',
+    image: 'https://i.imgur.com/N55veW4.png?1',
+    description:
+      'A declarative, efficient, and flexible JavaScript library for building user interfaces',
+    pullRequests: [
       {
-        prName: 'Added verification check for misspelled propTypes',
-        isMerged: true,
-        prUrl: 'https://github.com/facebook/react/pull/11524',
+        pullName: 'Added verification check for misspelled propTypes',
+        isPullMerged: true,
+        pullURL: 'https://github.com/facebook/react/pull/11524',
       },
       {
-        prName: 'IE/Edge bug when rendering inputs in portals',
-        isMerged: true,
-        prUrl: 'https://github.com/facebook/react/pull/11870',
+        pullName: 'IE/Edge bug when rendering inputs in portals',
+        isPullMerged: true,
+        pullURL: 'https://github.com/facebook/react/pull/11870',
       },
       {
-        prName: 'changed {} in pck.json and split them with && in fixtures',
-        isMerged: true,
-        prUrl: 'https://github.com/facebook/react/pull/11982',
+        pullName: 'changed {} in pck.json and split them with && in fixtures',
+        isPullMerged: true,
+        pullURL: 'https://github.com/facebook/react/pull/11982',
       },
     ],
   },
   {
-    repoName: 'Kleros/Kleros-Front',
-    desc: 'A decentralized autonomous organization that delivers fast, affordable and transparent justice for all.',
-    repoPRs: [
+    repositoryName: 'Kleros/Kleros-Front',
+    image: 'https://avatars0.githubusercontent.com/u/30119881?s=200&v=4',
+    description:
+      'A decentralized autonomous organization that delivers fast, affordable and transparent justice for all.',
+    pullRequests: [
       {
-        prName: 'moved irr dependencies to devDependencies',
-        isMerged: true,
-        prUrl: 'https://github.com/kleros/kleros-front/pull/85',
+        pullName: 'moved irr dependencies to devDependencies',
+        isPullMerged: true,
+        pullURL: 'https://github.com/kleros/kleros-front/pull/85',
       },
       {
-        prName: 'Added  Banner MetroCard to storybook',
-        isMerged: true,
-        prUrl: 'https://github.com/kleros/kleros-front/pull/83',
+        pullName: 'Added  Banner MetroCard to storybook',
+        isPullMerged: true,
+        pullURL: 'https://github.com/kleros/kleros-front/pull/83',
       },
       {
-        prName: 'Fix sidebar error story',
-        isMerged: true,
-        prUrl: 'https://github.com/kleros/kleros-front/pull/81',
+        pullName: 'Fix sidebar error story',
+        isPullMerged: true,
+        pullURL: 'https://github.com/kleros/kleros-front/pull/81',
       },
       {
-        prName: 'fixed broken links in storybook js for three files',
-        isMerged: true,
-        prUrl: 'https://github.com/kleros/kleros-front/pull/80',
+        pullName: 'fixed broken links in storybook js for three files',
+        isPullMerged: true,
+        pullURL: 'https://github.com/kleros/kleros-front/pull/80',
       },
     ],
   },
   {
-    repoName: 'JFMengels/All-Contributors-CLI',
-    desc: 'Tool to help automate adding contributor acknowledgements according to the all-contributors specification.',
-    repoPRs: [
+    repositoryName: 'JFMengels/All-Contributors-CLI',
+    image: 'https://i.imgur.com/EUH7sDm.png',
+    description:
+      'Tool to help automate adding contributor acknowledgements according to the all-contributors specification.',
+    pullRequests: [
       {
-        prName: 'projectOwner & projectName is not set in .all-contributorsrc file',
-        isMerged: false,
-        prUrl: 'https://github.com/jfmengels/all-contributors-cli/pull/80',
+        pullName: 'projectOwner & projectName is not set in .all-contributorsrc file',
+        isPullMerged: false,
+        pullURL: 'https://github.com/jfmengels/all-contributors-cli/pull/80',
       },
       {
-        prName: 'fix broken TOC and expand examples',
-        isMerged: true,
-        prUrl: 'https://github.com/jfmengels/all-contributors-cli/pull/79',
+        pullName: 'fix broken TOC and expand examples',
+        isPullMerged: true,
+        pullURL: 'https://github.com/jfmengels/all-contributors-cli/pull/79',
       },
       {
-        prName: 'Wrong contribution type being added to .all-contributorsrc',
-        isMerged: false,
-        prUrl: 'https://github.com/jfmengels/all-contributors-cli/pull/78',
+        pullName: 'Wrong contribution type being added to .all-contributorsrc',
+        isPullMerged: false,
+        pullURL: 'https://github.com/jfmengels/all-contributors-cli/pull/78',
       },
     ],
   },
 ]
 
-export default opensourceData
+export default myOpensource
