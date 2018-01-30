@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { space } from 'styled-system'
+import { textAlign } from 'styled-system'
 
 const greyColor = ['#404040', '#7F7F7F', '#BFBFBF', '#E5E5E5']
 
@@ -26,6 +27,7 @@ export const Heading2Text = styled.h2`
   color: ${props => (props.primary ? greyColor[1] : greyColor[2])};
   font-weight: 900;
   letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};
+  text-align: ${props => (props.centerText ? 'center' : 'inherit')};
 `
 
 export const Heading3Text = styled.h3`
@@ -34,4 +36,16 @@ export const Heading3Text = styled.h3`
   font-weight: 600;
   letter-spacing: 1.5px;
   text-align: ${props => (props.centerText ? 'center' : 'inherit')};
+`
+
+export const LinkButton = styled.a`
+  ${textAlign};
+  ${space};
+  color: ${greyColor[2]};
+  font-size: 1.3rem;
+  text-align: ${props => (props.centerText ? 'center' : 'inherit')};
+  cursor: pointer;
+  :hover {
+    color: ${greyColor[1]};
+  }
 `

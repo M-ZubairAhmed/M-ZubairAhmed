@@ -2,6 +2,7 @@ import React from 'react'
 import { Item, Button, Image, Header } from 'semantic-ui-react'
 import styled from 'styled-components'
 import { Flex, Box } from 'grid-styled'
+import Link from 'gatsby-link'
 
 import displayPic from '../data/avatar.jpeg'
 import myProjects from '../data/projects'
@@ -25,7 +26,7 @@ import Medium from 'react-icons/lib/fa/medium'
 import Stackoverflow from 'react-icons/lib/fa/stack-overflow'
 import Skype from 'react-icons/lib/fa/skype'
 import ProjectCard from '../components/projects-card'
-import { Container, Card, Heading1Text, Heading2Text, Heading3Text } from '../utils/common-styles'
+import { Container, Card, Heading1Text, Heading2Text, Heading3Text, LinkButton } from '../utils/common-styles'
 
 const TypeText = styled(Header)`
   letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};
@@ -81,7 +82,7 @@ export default () => (
       </Heading3Text>
       <Flex direction={['column', 'row']}>
         <Box width={(1, 1 / 5)}>
-          <Heading3Text mb={[2, 4]}>Skills</Heading3Text>
+          <Heading3Text mb={[2, 4]}>SKILLS</Heading3Text>
         </Box>
         <Box width={(1, 4 / 5)} m={'0 auto'}>
           <JavascriptIcon width={'50px'} height={'50px'} />
@@ -93,11 +94,17 @@ export default () => (
       </Flex>
     </Card>
     <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
-      <Heading3Text mb={[2, 4]}>Projects</Heading3Text>
+      <Heading3Text mb={[2, 4]}>PROJECTS</Heading3Text>
       <Item.Group divided>{myProjects.map(project => <ProjectCard {...project} key={project.url} />)}</Item.Group>
-      <Button basic fluid>
-        View more
-      </Button>
+      <Link to="/projects">
+        <Heading3Text centerText>VIEW MORE</Heading3Text>
+      </Link>
+    </Card>
+    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+      <Heading3Text mb={[2, 4]}>OPEN SOURCE</Heading3Text>
+      <Link to="/opensource">
+        <Heading3Text centerText>VIEW MORE</Heading3Text>
+      </Link>
     </Card>
   </Container>
 )

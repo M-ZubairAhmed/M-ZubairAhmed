@@ -1,3 +1,3 @@
 import React from 'react'
 
-export default () => <div>as</div>
+export default () => <div>opensource</div>
