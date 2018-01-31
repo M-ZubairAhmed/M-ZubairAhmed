@@ -1,10 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
+
 import { Divider } from 'semantic-ui-react'
 import { Card, Heading2Text, Heading3Text, CenterVH } from '../utils/common-styles'
+import HTMLHead from '../components/head-tag'
 
 export default () => (
   <CenterVH>
+    <HTMLHead
+      title="404 | Md-ZubairAhmed"
+      description="Website where i share stuff i learn & work on with the rest of the world."
+    />
     <Card p={[1, 2, 3]} m={2}>
       <Heading2Text centerText mb={[2, 4]}>
         Sorry!<br />but I dont remember creating this page <br /> or <br /> there's a misspell in

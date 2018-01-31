@@ -2,7 +2,6 @@ import React from 'react'
 import { Item, Image } from 'semantic-ui-react'
 import { Flex, Box } from 'grid-styled'
 import Link from 'gatsby-link'
-import 'semantic-ui-css/semantic.min.css'
 
 import myPicture from '../data/avatar.jpeg'
 import myProjects from '../data/projects'
@@ -15,9 +14,14 @@ import SkillIcons from '../components/skill-icons'
 import ProjectCard from '../components/projects-card'
 import OpensourceCard from '../components/opensource-card'
 import BlogsCard from '../components/blogs-card'
+import HTMLHead from '../components/head-tag'
 
 export default () => (
   <Container>
+    <HTMLHead
+      title="Md-ZubairAhmed's"
+      description="Website where i share stuff i learn & work on with the rest of the world."
+    />
     <Card centerText p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
       <Image rounded bordered size="small" centered src={myPicture} />
       <Heading1Text spaced>Md Zubair Ahmed</Heading1Text>
