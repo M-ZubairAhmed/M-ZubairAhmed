@@ -10,9 +10,9 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div`
+  ${space};
   border: ${`0.8px solid ${greyColor[3]}`};
   border-radius: 4px;
-  ${space};
   text-align: ${props => (props.centerText ? 'center' : 'inherit')};
 `
 
@@ -20,6 +20,7 @@ export const Heading1Text = styled.h1`
   color: ${greyColor[0]};
   font-weight: 900;
   letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};
+  text-align: ${props => (props.centerText ? 'center' : 'inherit')};
 `
 
 export const Heading2Text = styled.h2`
@@ -44,4 +45,12 @@ export const SocialIcon = styled.a`
   :hover {
     color: ${greyColor[3]};
   }
+`
+
+export const CenterVH = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 `
