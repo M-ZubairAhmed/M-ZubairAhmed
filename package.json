@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^2.0.4",
     "gatsby-plugin-styled-components": "^2.0.5",
     "grid-styled": "^2.0.0-11",
+    "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "semantic-ui-react": "^0.77.2",

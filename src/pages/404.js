@@ -10,6 +10,7 @@ export default () => (
     <HTMLHead
       title="404 | Md-ZubairAhmed"
       description="Website where i share stuff i learn & work on with the rest of the world."
+      image="https://en.gravatar.com/userimage/91254841/c8579ee1ac7aa6ddce02787fea02079e.jpg?size=200"
     />
     <Card p={[1, 2, 3]} m={2}>
       <Heading2Text centerText mb={[2, 4]}>

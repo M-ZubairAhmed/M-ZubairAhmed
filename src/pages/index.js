@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item, Image } from 'semantic-ui-react'
+import { Item, Image, Button, Icon } from 'semantic-ui-react'
 import { Flex, Box } from 'grid-styled'
 import Link from 'gatsby-link'
 
@@ -21,8 +21,9 @@ export default () => (
     <HTMLHead
       title="Md-ZubairAhmed's"
       description="Website where i share stuff i learn & work on with the rest of the world."
+      image="https://en.gravatar.com/userimage/91254841/c8579ee1ac7aa6ddce02787fea02079e.jpg?size=200"
     />
-    <Card centerText p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card centerText px={[2, 3]} pt={[2, 3]} pb={4} mt={[0, 2]} mb={[4, 3]}>
       <Image rounded bordered size="small" centered src={myPicture} />
       <Heading1Text spaced>Md Zubair Ahmed</Heading1Text>
       <Heading2Text primary spaced>
@@ -31,7 +32,7 @@ export default () => (
       <Heading2Text spaced>ahmedzubair216@gmail.com</Heading2Text>
       <SocialIcons />
     </Card>
-    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card px={[2, 3]} pt={[2, 3]} pb={4} mb={[4, 3]}>
       <Heading3Text primary centerText>
         A self taught developer with keen interest to keep exploring new technologies. An avid open
         source contributor. Have been developing web and mobile applications.
@@ -45,16 +46,19 @@ export default () => (
         </Box>
       </Flex>
     </Card>
-    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card px={[2, 3]} pt={[2, 3]} pb={4} mb={[4, 3]}>
       <Heading3Text mb={[2, 4]}>PROJECTS</Heading3Text>
       <Item.Group divided>
         {myProjects.slice(0, 3).map(project => <ProjectCard {...project} key={project.url} />)}
       </Item.Group>
       <Link to="/projects">
-        <Heading3Text centerText>VIEW MORE</Heading3Text>
+        <Button basic size="mini" floated="right">
+          VIEW MORE
+          <Icon disabled name="arrow right" />
+        </Button>
       </Link>
     </Card>
-    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card px={[2, 3]} pt={[2, 3]} pb={4} mb={[4, 3]}>
       <Heading3Text mb={[2, 4]}>OPEN SOURCES</Heading3Text>
       <Item.Group divided>
         {myOpensource
@@ -62,16 +66,22 @@ export default () => (
           .map(opensource => <OpensourceCard key={opensource.repositoryName} {...opensource} />)}
       </Item.Group>
       <Link to="/opensources">
-        <Heading3Text centerText>VIEW MORE</Heading3Text>
+        <Button basic size="mini" floated="right">
+          VIEW MORE
+          <Icon disabled name="arrow right" />
+        </Button>
       </Link>
     </Card>
-    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card px={[2, 3]} pt={[2, 3]} pb={4} mb={[4, 3]}>
       <Heading3Text mb={[2, 4]}>BLOG POSTS</Heading3Text>
       <Item.Group divided>
         {myBlogs.slice(0, 3).map(blog => <BlogsCard key={blog.title} {...blog} />)}
       </Item.Group>
-      <Link to="/blogs">
-        <Heading3Text centerText>VIEW MORE</Heading3Text>
+      <Link to="/blog">
+        <Button basic size="mini" floated="right">
+          VIEW MORE
+          <Icon disabled name="arrow right" />
+        </Button>
       </Link>
     </Card>
   </Container>

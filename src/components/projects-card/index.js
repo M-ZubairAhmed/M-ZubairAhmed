@@ -9,6 +9,9 @@ export default props => (
       <Item.Meta as="a" target="_blank" href={props.url}>
         {props.url}
       </Item.Meta>
+      <Button size="mini" as="a" href={props.repo} target="_blank" basic floated="right">
+        Show Code
+      </Button>
       <Item.Meta>{props.description}</Item.Meta>
       <Item.Extra>
         {props.technologies.map(technology => (
@@ -16,9 +19,6 @@ export default props => (
             {technology}
           </Label>
         ))}
-        <Button size="mini" as="a" href={props.repo} target="_blank" basic floated="right">
-          View Code
-        </Button>
       </Item.Extra>
     </Item.Content>
   </Item>

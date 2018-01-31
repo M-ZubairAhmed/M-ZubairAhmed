@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from 'semantic-ui-react'
+import { Item, Button, Icon } from 'semantic-ui-react'
 import Link from 'gatsby-link'
 
 import myOpensource from '../data/opensource'
@@ -12,8 +12,9 @@ export default () => (
     <HTMLHead
       title="OpenSource | Md-ZubairAhmed"
       description="Website where i share stuff i learn & work on with the rest of the world."
+      image="https://en.gravatar.com/userimage/91254841/c8579ee1ac7aa6ddce02787fea02079e.jpg?size=200"
     />
-    <Card p={[1, 2, 3]} mt={[0, 2]} mb={[2, 3]}>
+    <Card px={[2, 3]} pt={[2, 3]} pb={4} mt={[0, 2]} mb={[4, 3]}>
       <Heading3Text primary mb={[2, 4]}>
         OPEN SOURCES
       </Heading3Text>
@@ -23,7 +24,10 @@ export default () => (
         ))}
       </Item.Group>
       <Link to="/">
-        <Heading3Text centerText>BACK TO HOME</Heading3Text>
+        <Button basic size="mini" floated="left">
+          <Icon disabled name="arrow left" />
+          BACK TO HOME
+        </Button>
       </Link>
     </Card>
   </Container>
