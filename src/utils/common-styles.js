@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { space } from 'styled-system'
+import { space, fontSize } from 'styled-system'
 
 const greyColor = ['#404040', '#7F7F7F', '#BFBFBF', '#E5E5E5']
 
@@ -17,6 +17,7 @@ export const Card = styled.div`
 `
 
 export const Heading1Text = styled.h1`
+  ${fontSize};
   color: ${greyColor[0]};
   font-weight: 900;
   letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};
@@ -24,6 +25,7 @@ export const Heading1Text = styled.h1`
 `
 
 export const Heading2Text = styled.h2`
+  ${fontSize};
   color: ${props => (props.primary ? greyColor[1] : greyColor[2])};
   font-weight: 900;
   letter-spacing: ${props => (props.spaced ? '3px' : '0.6px')};

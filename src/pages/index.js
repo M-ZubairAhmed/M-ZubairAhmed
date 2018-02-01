@@ -25,15 +25,19 @@ export default () => (
     />
     <Card centerText px={[2, 3]} pt={[2, 3]} pb={4} mt={[0, 2]} mb={[4, 3]}>
       <Image rounded bordered size="small" centered src={myPicture} />
-      <Heading1Text spaced>Md Zubair Ahmed</Heading1Text>
-      <Heading2Text primary spaced>
+      <Heading1Text spaced fontSize={[4, 5]}>
+        Md Zubair Ahmed
+      </Heading1Text>
+      <Heading2Text primary spaced fontSize={[4, 4]}>
         Frontend Developer
       </Heading2Text>
-      <Heading2Text spaced>ahmedzubair216@gmail.com</Heading2Text>
+      <Heading2Text spaced fontSize={[3, 4]}>
+        ahmedzubair216@gmail.com
+      </Heading2Text>
       <SocialIcons />
     </Card>
     <Card px={[2, 3]} pt={[2, 3]} pb={4} mb={[4, 3]}>
-      <Heading3Text primary centerText>
+      <Heading3Text primary centerText fontSize={[3, 5]}>
         A self taught developer with keen interest to keep exploring new technologies. An avid open
         source contributor. Have been developing web and mobile applications.
       </Heading3Text>

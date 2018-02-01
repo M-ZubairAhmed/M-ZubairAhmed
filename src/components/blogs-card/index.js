@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Icon, Image, Item, Label, LabelGroup, List } from 'semantic-ui-react'
+import { truncrateString } from '../../utils/helpers'
 
 export default props => (
   <Item style={{ padding: '30px' }}>
@@ -8,7 +9,7 @@ export default props => (
         {props.title}
       </Item.Header>
       <Item.Meta>{props.date}</Item.Meta>
-      <Item.Meta>{props.description}</Item.Meta>
+      <Item.Meta>{truncrateString(props.description, 320)}</Item.Meta>
       <Item.Extra>
         {props.readDuration === '1'
           ? `${props.readDuration} min read`
