@@ -10,7 +10,8 @@ const projects = [
     title: "Cool React app",
     decription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat enim amet voluptatum, aut quisquam a, veritatis dolores odit adipisci corrupti tenetur optio. Aliquam incidunt dolor laborum tempore officia obcaecati.",
-    imageURL: "https://user-images.githubusercontent.com/17708702/56468550-e04d5500-644b-11e9-80fb-6e091d0ef1cd.png",
+    imageURL:
+      "https://user-images.githubusercontent.com/17708702/56468550-e04d5500-644b-11e9-80fb-6e091d0ef1cd.png",
     sourceURL: "https://github.com",
     hostedURL: "http://www.google.com",
     tech: "ReactJS, NodeJS, Mongoose",

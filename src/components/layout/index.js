@@ -17,7 +17,7 @@ const tags = [
   `Portfolio Site`,
   `Golang`,
   `Hyderabad`,
-  "India"
+  "India",
 ]
 
 const Layout = ({ children }) => (
@@ -33,10 +33,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <SEO
-          title="M-Zubair Ahmed"
-          keywords={tags}
-        />
+        <SEO title="M-Zubair Ahmed" keywords={tags} />
         <Navbar />
         <div
           style={{
