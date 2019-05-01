@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.App {
+  font-family: "Roboto", sans-serif;
+}
+
+.myjumbo {
+  min-height: 26rem;
+  background-color: #ffffff !important;
+}
+
+.myjumbo h1 {
+  line-height: 125%;
+}
+
+.myjumbo h2 {
+  font-size: 2rem;
+}
+
+.myjumbo h3 {
+  font-size: 1.7rem;
+}
+.myjumbo_content {
+  margin-top: 6.5rem;
+  width: 100%;
+}
+
+.myjumbo_content p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 550px) {
+  .myjumbo {
+    height: 10rem;
+  }
+  .myjumbo h1 {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .myjumbo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .myjumbo_content {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .myjumbo_content p {
+    font-size: 1.25rem;
+  }
+}
+
+.jumbo_social {
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+
+}
+
+.jumbo_social i {
+  font-size: 2rem;
+}
+
+a:link {
+  color: #555555 !important;
+}
+
+.hover_effect:hover {
+  color: #000000 !important;
+}
+
+@media (max-width: 550px) {
+  .jumbo_social i {
+    font-size: 1.6rem;
+  }
+}
+
+.project_container {
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding-top: 0.4rem;
+  padding-left: 0.4rem;
+  padding-right: 1rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 550px) {
+  .project_container {
+    font-size: 0.8rem;
+  }
+
+  .project_container h4 {
+    font-size: 1.4rem;
+  }
+
+  .button_styles {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.top_border {
+  border-top-style: solid;
+  border-width: 2px;
+  border-color: blueviolet;
+  width: 100%;
+}
+
+.nav_styles {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-top: 0.5rem;
+}
+
+.float_left {
+  float: left;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+.float_right {
+  float: right;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+
+i:hover {
+  color: blueviolet;
+}
+
+.menu_link {
+  color:#555555 ;
+}
+
+.menu_link:hover {
+  color:#000000 !important;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 630px) {
+  .float_left {
+    font-size: 2rem;
+  }
+  .float_right {
+    font-size: 1rem;
+  }
+}
+
+.jumbo {
+  /* height: 100vh; */
+  background-color: #ffffff !important;
+}
+
+.jumbo h1 {
+  line-height: 125%;
+}
+
+.jumbo h2 {
+  font-size: 2rem;
+}
+
+.jumbo h3 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.jumbo_content {
+  margin-top: 6.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.jumbo_content p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 550px) {
+  .jumbo {
+    height: 36rem;
+  }
+  .jumbo h1 {
+    margin-top: 4rem;
+    font-size: 1.75rem;
+  }
+
+  .jumbo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+
+  .jumbo_content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .jumbo_content p {
+    font-size: 1.25rem;
+  }
+}
