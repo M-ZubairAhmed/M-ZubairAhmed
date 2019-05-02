@@ -1,7 +1,7 @@
-import React from "react"
-import { Jumbotron } from "react-bootstrap"
+import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 
-const MyJumbo = props => (
+const MyJumbo = (props) => (
   <Jumbotron fluid className="myjumbo">
     <div className="myjumbo_content">
       <h1>{props.title}</h1>

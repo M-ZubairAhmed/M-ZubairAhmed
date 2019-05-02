@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 
-import SEO from "../Seo"
-import Navbar from "../navbar"
+import SEO from '../Seo'
+import Navbar from '../navbar'
 
-import "../../styles/bootstrap/bootstrap.min.css"
-import "../../styles/fontawesome/css/all.min.css"
-import "../../styles/appStyles/appStyles.css"
+import '../../styles/bootstrap/bootstrap.min.css'
+import '../../styles/fontawesome/css/all.min.css'
+import '../../styles/appStyles/appStyles.css'
 
 const tags = [
   `software developer`,
@@ -17,7 +17,7 @@ const tags = [
   `Portfolio Site`,
   `Golang`,
   `Hyderabad`,
-  "India",
+  'India',
 ]
 
 const Layout = ({ children }) => (
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <SEO title="M-Zubair Ahmed" keywords={tags} />
         <Navbar />
@@ -41,8 +41,7 @@ const Layout = ({ children }) => (
             maxWidth: 960,
             padding: `0px`,
             paddingTop: 0,
-          }}
-        >
+          }}>
           <main>{children}</main>
         </div>
       </>

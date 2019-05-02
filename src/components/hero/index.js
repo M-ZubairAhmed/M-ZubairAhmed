@@ -1,5 +1,5 @@
-import React from "react"
-import { Jumbotron } from "react-bootstrap"
+import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 
 const Hero = () => (
   <Jumbotron className="jumbo" fluid>

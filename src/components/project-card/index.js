@@ -1,15 +1,15 @@
-import React from "react"
-import { Row, Col, Button } from "react-bootstrap"
+import React from 'react'
+import { Row, Col, Button } from 'react-bootstrap'
 
-const ProjectCard = props => {
+const ProjectCard = (props) => {
   return (
     <div className="project_container">
       <Row>
         <Col>
           <img
             src={props.imageSrcPath}
-            alt={"project specific logo"}
-            style={{ maxWidth: "100%" }}
+            alt={'project specific logo'}
+            style={{ maxWidth: '100%' }}
           />
         </Col>
         <Col className="d-flex flex-column justify-content-between">
