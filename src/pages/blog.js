@@ -1,13 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import Hero from '../components/hero'
-import Social from '../components/social'
+import Jumbotron from '../components/jumbotron';
 
 export default () => (
-  <div className="App">
-    <Layout>
-      <Social />
-    </Layout>
-  </div>
+  <Layout>
+    <Jumbotron title="My Blog" description="Writing small blog posts, so i can share what i have experience and learned"/>
+    <hr />
+  </Layout>
 )

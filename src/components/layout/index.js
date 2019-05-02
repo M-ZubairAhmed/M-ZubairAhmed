@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import SEO from '../Seo'
+import SEO from '../seo'
 import Navbar from '../navbar'
 
-import '../../styles/bootstrap/bootstrap.min.css'
-import '../../styles/fontawesome/css/all.min.css'
-import '../../styles/appStyles/appStyles.css'
+import '../../styles/index.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const tags = [
   `software developer`,
@@ -32,19 +31,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <>
+      <main className="container">
         <SEO title="M-Zubair Ahmed" keywords={tags} />
         <Navbar />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px`,
-            paddingTop: 0,
-          }}>
-          <main>{children}</main>
-        </div>
-      </>
+        <section>{children}</section>
+      </main>
     )}
   />
 )

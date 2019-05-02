@@ -1,41 +1,55 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 
 const socialData = [
   {
     link: 'https://github.com/M-ZubairAhmed/',
     icon: 'fab fa-github',
+    name: 'Github',
   },
   {
     link: 'https://twitter.com/Md_ZubairAhmed/',
     icon: 'fab fa-twitter',
+    name: 'Twitter',
   },
   {
     link: 'https://www.linkedin.com/in/md-zubairahmed/',
     icon: 'fab fa-linkedin',
+    name: 'Linkedin',
+  },
+  {
+    link: 'https://stackoverflow.com/story/md_zubairahmed',
+    icon: 'fab fa-angellist',
+    name: 'Stackoverflow',
   },
   {
     link: 'https://angel.co/m-zubair-ahmed/',
     icon: 'fab fa-angellist',
+    name: 'AngelList',
   },
   {
     link: 'mailto:m-zubairahmed@protonmail.com',
     icon: 'far fa-envelope',
+    name: 'Email',
   },
 ]
 
 export default () => (
-  <Row className="jumbo_social text-center">
-    {socialData.map((social) => (
-      <Col>
-        <a
-          style={{ color: '#000' }}
-          href={social.link}
-          target="_blank"
-          rel="noopener noreferrer">
-          <i className={`${social.icon} hover_effect`} />
-        </a>
-      </Col>
-    ))}
-  </Row>
+  <div className="p-4">
+    <h5 className="pb-3">
+      I can be found on the <mark>Internet</mark> via
+    </h5>
+    <ul className="list-group list-group-horizontal-xl list-group-horizontal-lg">
+      {socialData.map((social) => (
+        <li class="list-group-item flex-fill text-center">
+          <a
+            style={{ color: '#000' }}
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer">
+            {social.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
 )

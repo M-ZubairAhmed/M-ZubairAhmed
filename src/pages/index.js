@@ -5,10 +5,9 @@ import Hero from '../components/hero'
 import Social from '../components/social'
 
 export default () => (
-  <div className="App">
-    <Layout>
-      <Hero />
-      <Social />
-    </Layout>
-  </div>
+  <Layout>
+    <Hero />
+    <hr />
+    <Social />
+  </Layout>
 )
