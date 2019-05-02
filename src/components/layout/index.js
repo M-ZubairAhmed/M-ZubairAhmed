@@ -6,7 +6,6 @@ import SEO from '../seo'
 import Navbar from '../navbar'
 
 import '../../styles/index.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const tags = [
   `software developer`,
