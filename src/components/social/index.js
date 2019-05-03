@@ -40,7 +40,7 @@ export default () => (
     </h5>
     <ul className="list-group list-group-horizontal-xl list-group-horizontal-lg">
       {socialData.map((social) => (
-        <li class="list-group-item flex-fill text-center">
+        <li className="list-group-item flex-fill text-center" key={social.name}>
           <a
             style={{ color: '#000' }}
             href={social.link}
