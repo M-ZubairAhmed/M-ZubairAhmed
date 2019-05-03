@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <main className="container">
-        <SEO title="M-Zubair Ahmed" keywords={tags} />
+        <SEO title="M-Zubair Ahmed" keywords={tags} lang="en" description="Software developer"/>
         <Navbar />
         <section>{children}</section>
       </main>

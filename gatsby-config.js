@@ -1,11 +1,11 @@
 module.exports = {
   pathPrefix: "/gatsby-clean-portfolio",
   siteMetadata: {
-    title: `John Doe - Software Developer`,
-    description: `Add you meta Description here!`,
-    url: "https://ugglr.github.io/gatsby-clean-portfolio/",
-    twitterUsername: "@real_carlw",
-    author: `@real_carlw`,
+    title: `M-ZubairAhmed`,
+    description: `Software developer`,
+    url: "https://mzubairahmed.ml/",
+    twitterUsername: "@Md_ZubairAhmed/",
+    author: `@M-ZubairAhmed/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
