@@ -1,5 +1,5 @@
 ---
-path : "/blog/fixing-sequelize-js-very-common-warning-"
+path : "/blog/fixing-sequelize-js-very-common-warning"
 date : "2019-2-12"
 title : "Fixing a very common warning of Sequelize.js"
 tage : ['squelizejs','javascript','code clean up']

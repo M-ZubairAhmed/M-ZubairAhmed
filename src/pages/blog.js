@@ -24,8 +24,8 @@ export default (props) => {
     const dateFormatted = dateFNSParse(date)
 
     return { dateFormatted, ...frontmatter }
-  }).sort((blogA, blogB) =>
-    !dateFnsIsAfter(blogA.dateFormatted, blogB.dateFormatted),
+  }).sort(
+    (blogA, blogB) => !dateFnsIsAfter(blogA.dateFormatted, blogB.dateFormatted),
   )
 
   return (
@@ -38,14 +38,18 @@ export default (props) => {
       </header>
       <section>
         {blogs.map((blog) => (
-          <div class="card mb-3">
-            <div class="card-body">
-              <Link to={blog.path}>
-                <h5 class="card-title text-dark">{blog.title}</h5>
-              </Link>
-              <h6 class="card-subtitle mb-2 text-muted">{blog.excerpt}</h6>
+          <Link to={blog.path} key={blog.path} className="text-decoration-none">
+            <div class="card mb-3 card-hover-effect">
+              <div class="card-body">
+                <h5 class="card-title text-dark text-decoration-none">
+                  {blog.title}
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted text-decoration-none">
+                  {blog.excerpt}...<strong>Continue reading</strong>
+                </h6>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </section>
     </Layout>
