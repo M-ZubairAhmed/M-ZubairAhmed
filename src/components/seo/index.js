@@ -87,13 +87,6 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-  description: `Add your meta information here!.`,
-}
-
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
