@@ -14,7 +14,8 @@ export default ({ location }) => {
             to="/"
             className={`nav-link  ${
               basePage === '' ? 'text-dark' : 'text-black-50'
-            }`}>
+            }`}
+            title="Go back to Home">
             &#9776;
           </Link>
         </li>
@@ -23,7 +24,8 @@ export default ({ location }) => {
             to="/blog"
             className={`nav-link ${
               basePage === 'blog' ? 'text-dark' : 'text-black-50'
-            }`}>
+            }`}
+            title="Go to Blog">
             Blog
           </Link>
         </li>
@@ -32,7 +34,8 @@ export default ({ location }) => {
             to="/projects"
             className={`nav-link ${
               basePage === 'projects' ? 'text-dark' : 'text-black-50'
-            }`}>
+            }`}
+            title="Go to Projects">
             Projects
           </Link>
         </li>
