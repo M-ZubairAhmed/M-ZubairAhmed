@@ -2,7 +2,7 @@
 path : "/blog/fixing-sequelize-js-very-common-warning"
 date : "2019-2-12"
 title : "Fixing a very common warning of Sequelize.js"
-tage : ['squelizejs','javascript','code clean up']
+tags : ['squelizejs','javascript','code clean up']
 excerpt : "We had this constant squelize error showing up in our development logs stating String based operators are now deprecated. It was time to fix this."
 ---
 

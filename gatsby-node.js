@@ -7,8 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
   const blogPost = path.resolve(
     __dirname,
     'src',
-    'components',
-    'blog-template.js',
+    'templates',
+    'journal.js',
   )
   return graphql(
     `

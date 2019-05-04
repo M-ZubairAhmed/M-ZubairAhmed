@@ -3,21 +3,26 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from './layout'
 
-class BlogTemplate extends React.Component {
+class Journal extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const mainSiteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const {
+      title: blogTitle,
+      date: blogDate,
+      excerpt: blogDescription,
+      tags: blogTags,
+    } = post.frontmatter
 
     return (
       <Layout
+        title={blogTitle || mainSiteTitle}
+        description={blogDescription}
         location={this.props.location}
-        title={siteTitle}
-        title={post.frontmatter.title}
-        // description={post.frontmatter.description || post.excerpt}
-      >
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+        meta={blogTags}>
+        <h1>{blogTitle}</h1>
+        <p>{blogDate}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <ul>
@@ -41,7 +46,7 @@ class BlogTemplate extends React.Component {
   }
 }
 
-export default BlogTemplate
+export default Journal
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -58,6 +63,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        tags
+        excerpt
       }
     }
   }
