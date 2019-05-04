@@ -9,7 +9,7 @@ export default ({ location }) => {
   return (
     <nav>
       <ul className="nav align-items-top">
-        <li className="nav-item">
+        <li className="nav-item mr-auto ">
           <Link
             to="/"
             className={`nav-link  ${
@@ -18,7 +18,6 @@ export default ({ location }) => {
             &#9776;
           </Link>
         </li>
-        <li className="flex-grow-1" />
         <li className="nav-item">
           <Link
             to="/blog"
