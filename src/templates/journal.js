@@ -1,8 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import dateFnsParse from 'date-fns/parse'
+import dateFnsFormat from 'date-fns/format'
 
 import Layout from './layout'
 import BlogFooter from '../components/blog-footer'
+import BlogHeader from '../components/blog-header'
 
 const Journal = ({ data, location, pageContext }) => {
   const post = data.markdownRemark
@@ -13,7 +16,8 @@ const Journal = ({ data, location, pageContext }) => {
     excerpt: blogDescription,
     tags: blogTags,
   } = post.frontmatter
-  
+  const _blogDate = dateFnsFormat(dateFnsParse(blogDate), 'D MMM \'YY')
+
   const { previous, next } = pageContext
   const nextArticle = {
     continueFurther: next ? true : false,
@@ -32,10 +36,9 @@ const Journal = ({ data, location, pageContext }) => {
       description={blogDescription}
       location={location}
       meta={blogTags}>
-      <h1>{blogTitle}</h1>
-      <p>{blogDate}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
+      <BlogHeader title={blogTitle} description={_blogDate} className="pb-1"/>
+      <div className="blogger" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr className="blogger-hr mb-5"/>
       <BlogFooter previousArticle={previousArticle} nextArticle={nextArticle} />
     </Layout>
   )

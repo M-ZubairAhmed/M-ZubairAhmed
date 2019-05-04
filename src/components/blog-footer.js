@@ -4,7 +4,7 @@ import { truncateText } from '../utils'
 
 export default ({ previousArticle, nextArticle }) => {
   return (
-    <footer className="d-md-flex d-lg-flex d-xl-flex justify-content-between flex-row-reverse">
+    <footer className="d-md-flex d-lg-flex d-xl-flex justify-content-between flex-row-reverse mb-5">
       <div>
         {nextArticle.continueFurther && (
           <Link

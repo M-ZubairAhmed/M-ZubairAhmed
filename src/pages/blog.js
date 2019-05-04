@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../templates/layout'
 import { Link, graphql } from 'gatsby'
-import dateFNSParse from 'date-fns/parse'
+import dateFnsParse from 'date-fns/parse'
 import dateFnsIsAfter from 'date-fns/is_after'
 
 import Jumbotron from '../components/jumbotron'
@@ -21,7 +21,7 @@ export default (props) => {
       node: { frontmatter },
     } = edge
 
-    const dateFormatted = dateFNSParse(date)
+    const dateFormatted = dateFnsParse(date)
 
     return { dateFormatted, ...frontmatter }
   }).sort(
@@ -39,7 +39,7 @@ export default (props) => {
           description="Writing small blog posts, so i can share what i have experience and learned"
         />
       </header>
-      <section>
+      <section className="mb-7">
         {blogs.map((blog) => (
           <Link to={blog.path} key={blog.path} className="text-decoration-none">
             <div class="card mb-3 card-hover-effect">

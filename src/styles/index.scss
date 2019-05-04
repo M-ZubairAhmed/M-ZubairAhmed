@@ -7,6 +7,89 @@ html {
   font-family: 'Lato', sans-serif !important;
 }
 
+.blogger {
+  max-width: 740px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  p {
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.84);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+    word-wrap: break-word;
+    padding-bottom: 1rem;
+  }
+  ol,
+  ul {
+    padding: 0;
+    list-style-image: none;
+  }
+  li {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+  }
+  a {
+    color: rgba(0, 0, 0, 0.84);
+    text-decoration: underline;
+    background-color: transparent;
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  pre {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    white-space: pre-wrap;
+    overflow: auto;
+  }
+  blockquote > p{
+    color: rgba(0, 0, 0, 0.68);
+    border: none;
+    padding: 0;
+    padding-left: 3rem;
+    text-align: left;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.48;
+    letter-spacing: -0.012em;
+    font-style: italic;
+  }
+}
+
+.blogger-header {
+  max-width: 740px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.blogger-hr {
+  border-top: 4px double #8c8b8b;
+  text-align: center;
+  &:after {
+    content: '\2665';
+    display: inline-block;
+    position: relative;
+    top: -26px;
+    padding: 0 10px;
+    background: #fff;
+    color: #8c8b8b;
+    font-size: 30px;
+  }
+}
+
 .display-picture {
   border-radius: 100%;
 }

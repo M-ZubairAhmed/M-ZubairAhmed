@@ -10,7 +10,7 @@ import '../styles/bootstrap.css'
 
 const Layout = (props) => {
   return (
-    <main className="container mb-7">
+    <main className="container">
       <SEO
         title={props.title}
         keywords={mainSiteTags}
