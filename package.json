@@ -4,10 +4,10 @@
   "description": "Personal website for m-zubairahmed",
   "version": "1.0.0",
   "scripts": {
-    "start": "ENVIRONMENT=DEVELOPMENT gatsby develop",
+    "start": "gatsby develop",
     "lint": "prettier --write src/**/*.{js,jsx}",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "start:prod": "gatsby serve"
   },
   "dependencies": {
     "date-fns": "^1.30.1",

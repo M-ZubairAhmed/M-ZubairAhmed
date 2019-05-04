@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 export default ({ location }) => {
-  const { pathname = '' } = location
+  const pathname = location && location.pathname ? location.pathname : ''
   const paths = pathname.split('/').filter((url) => url)
   const basePage = paths && paths[0] ? paths[0] : ''
+
   return (
     <nav>
       <ul className="nav align-items-top">

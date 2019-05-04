@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 import Navbar from '../components/navbar'
 
 import '../styles/index.scss'
-import '../styles/bootstrap.css'
+// import '../styles/bootstrap.css'
 
 const Layout = (props) => {
   return (
