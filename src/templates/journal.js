@@ -1,52 +1,45 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from './layout'
+import BlogFooter from '../components/blog-footer'
 
-class Journal extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const mainSiteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-    const {
-      title: blogTitle,
-      date: blogDate,
-      excerpt: blogDescription,
-      tags: blogTags,
-    } = post.frontmatter
-
-    return (
-      <Layout
-        title={blogTitle || mainSiteTitle}
-        description={blogDescription}
-        location={this.props.location}
-        meta={blogTags}>
-        <h1>{blogTitle}</h1>
-        <p>{blogDate}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <ul>
-          <li>
-            {previous && (
-              <Link to={`blog/${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog/${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    )
+const Journal = ({ data, location, pageContext }) => {
+  const post = data.markdownRemark
+  const mainSiteTitle = data.site.siteMetadata.title
+  const {
+    title: blogTitle,
+    date: blogDate,
+    excerpt: blogDescription,
+    tags: blogTags,
+  } = post.frontmatter
+  
+  const { previous, next } = pageContext
+  const nextArticle = {
+    continueFurther: next ? true : false,
+    path: next ? next.fields.slug : '',
+    title: next ? next.frontmatter.title : '',
   }
-}
+  const previousArticle = {
+    continueFurther: previous ? true : false,
+    path: previous ? previous.fields.slug : '',
+    title: previous ? previous.frontmatter.title : '',
+  }
 
-export default Journal
+  return (
+    <Layout
+      title={blogTitle || mainSiteTitle}
+      description={blogDescription}
+      location={location}
+      meta={blogTags}>
+      <h1>{blogTitle}</h1>
+      <p>{blogDate}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
+      <BlogFooter previousArticle={previousArticle} nextArticle={nextArticle} />
+    </Layout>
+  )
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -69,3 +62,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Journal

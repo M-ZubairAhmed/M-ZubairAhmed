@@ -1,7 +1,7 @@
 ---
-path : "/blog/migrating-bluebird-promises-to-native-ones"
-date : "2019-2-6"
-title : "Migrating Bluebird promises to native ones"
+path : "/blog/aaaa"
+date : "2019-5-1"
+title : "QWWQ"
 tags : ['bluebirdjs','promises','javascript','code clean up']
 excerpt : "Promises are now pretty solid in browsers, so we had to remove support library for promises"
 ---

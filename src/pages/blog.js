@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../templates/layout'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import dateFNSParse from 'date-fns/parse'
 import dateFnsIsAfter from 'date-fns/is_after'
 
@@ -31,7 +31,7 @@ export default (props) => {
   return (
     <Layout
       title="Blog"
-      description="Writing small blog posts, so i can share what i have experience and learned"
+      description="Writing small blog posts, so i can share what i have learned and experienced"
       location={props.location}>
       <header>
         <Jumbotron
