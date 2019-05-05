@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { mainSiteTags } from '../constants'
+import { mainSiteTags } from '../utils/constants'
 
 import SEO from '../components/seo'
 import Navbar from '../components/navbar'
 
 import '../styles/index.scss'
-import '../styles/bootstrap.css'
+// import '../styles/bootstrap.css'
 
 const Layout = (props) => {
   return (
