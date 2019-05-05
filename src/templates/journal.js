@@ -36,8 +36,8 @@ const Journal = ({ data, location, pageContext }) => {
       description={blogDescription}
       location={location}
       meta={blogTags}>
-      <BlogHeader title={blogTitle} description={_blogDate} className="pb-1"/>
-      <div className="blogger" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <BlogHeader title={blogTitle} description={_blogDate} className="pb-1 px-1"/>
+      <div className="blogger px-1" dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr className="blogger-hr mb-5"/>
       <BlogFooter previousArticle={previousArticle} nextArticle={nextArticle} />
     </Layout>

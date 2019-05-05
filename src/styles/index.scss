@@ -9,8 +9,8 @@ html {
 
 .blogger {
   max-width: 740px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 4rem;
@@ -44,13 +44,9 @@ html {
       color: rgba(0, 0, 0, 0.5);
     }
   }
-  pre {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    white-space: pre-wrap;
-    overflow: auto;
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
   }
   blockquote > p{
     color: rgba(0, 0, 0, 0.68);

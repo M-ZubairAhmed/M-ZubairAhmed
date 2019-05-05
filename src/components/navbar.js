@@ -16,7 +16,7 @@ export default ({ location }) => {
               basePage === '' ? 'text-dark' : 'text-black-50'
             }`}
             title="Go back to Home">
-            &#9776;
+            &#8484;ubair
           </Link>
         </li>
         <li className="nav-item">
