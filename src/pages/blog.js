@@ -33,13 +33,11 @@ export default (props) => {
       title="Blog"
       description="Writing small blog posts, so i can share what i have learned and experienced"
       location={props.location}>
-      <header>
-        <Jumbotron
-          title="My Blog"
-          description="Writing small blog posts, so i can share what i have experience and learned"
-        />
-      </header>
-      <section className="mb-7">
+      <Jumbotron
+        title="My Blog"
+        description="Writing small blog posts, so i can share what i have experience and learned"
+      />
+      <section className="mb-7 px-3">
         {blogs.map((blog) => (
           <Link to={blog.path} key={blog.path} className="text-decoration-none">
             <div class="card mb-3 card-hover-effect">

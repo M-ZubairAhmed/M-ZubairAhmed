@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default (props) => (
-  <div className={`jumbotron bg-white`}>
+  <header className={`px-3 py-5`}>
     <h1 className="display-4">{props.title}</h1>
     <p className="lead">{props.description}</p>
-  </div>
+  </header>
 )
