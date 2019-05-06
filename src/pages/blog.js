@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../templates/layout'
+import App from '../app'
 import { Link, graphql } from 'gatsby'
 import dateFnsParse from 'date-fns/parse'
 import dateFnsIsAfter from 'date-fns/is_after'
@@ -29,7 +29,7 @@ export default (props) => {
   )
 
   return (
-    <Layout
+    <App
       title="Blog"
       description="Writing small blog posts, so i can share what i have learned and experienced"
       location={props.location}>
@@ -53,7 +53,7 @@ export default (props) => {
           </Link>
         ))}
       </section>
-    </Layout>
+    </App>
   )
 }
 

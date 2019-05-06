@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Layout from '../templates/layout'
+import App from '../app'
 
 export default () => (
-  <Layout>
+  <App>
     <div
       className=" container-fluid d-flex flex-column justify-content-center align-items-center text-center"
       style={{ minHeight: '80vh' }}>
@@ -14,5 +14,5 @@ export default () => (
         </button>
       </Link>
     </div>
-  </Layout>
+  </App>
 )

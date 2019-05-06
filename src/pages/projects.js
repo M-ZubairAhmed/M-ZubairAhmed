@@ -1,16 +1,16 @@
 import React from 'react'
-import Layout from '../templates/layout'
+import App from '../app'
 
 import Jumbotron from '../components/jumbotron'
 
 export default ({ location }) => (
-  <Layout
+  <App
     title="Projects"
-    description="List of my small, projects helping me immensly in learning and understanding concepts."
+    description="Building small projects helps me immensly in learning and understanding concepts."
     location={location}>
     <Jumbotron
       title="My Projects"
-      description="List of my small projects helping me immensly in learning and understanding concepts."
+      description="Building small projects helps me immensly in learning and understanding concepts."
     />
     <section className="mb-7 px-3">
       <div class="card mb-3 card-hover-effect">
@@ -18,9 +18,11 @@ export default ({ location }) => (
           <h5 class="card-title text-dark text-decoration-none">
             Coming soon...
           </h5>
-          <h6 class="card-subtitle mb-2 text-muted text-decoration-none" />
+          <h6 class="card-subtitle mb-2 text-muted text-decoration-none">
+            ish
+          </h6>
         </div>
       </div>
     </section>
-  </Layout>
+  </App>
 )

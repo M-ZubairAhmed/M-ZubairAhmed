@@ -9,20 +9,20 @@ const ThemeContext = React.createContext(defaultState)
 
 class ThemeProvider extends React.Component {
   state = {
-    dark: false,
+    isDarkMode: false,
   }
 
   toggleDark = () => {
-    this.setState({ dark: !this.state.dark })
+    this.setState({ isDarkMode: !this.state.isDarkMode })
   }
 
   render() {
     const { children } = this.props
-    const { dark } = this.state
+    const { isDarkMode } = this.state
     return (
       <ThemeContext.Provider
         value={{
-          dark,
+          isDarkMode,
           toggleDark: this.toggleDark,
         }}>
         {children}

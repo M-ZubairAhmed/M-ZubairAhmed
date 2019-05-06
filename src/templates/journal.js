@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import dateFnsParse from 'date-fns/parse'
 import dateFnsFormat from 'date-fns/format'
 
-import Layout from './layout'
+import App from '../app'
 import BlogFooter from '../components/blog-footer'
 import BlogHeader from '../components/blog-header'
 
@@ -16,7 +16,7 @@ const Journal = ({ data, location, pageContext }) => {
     excerpt: blogDescription,
     tags: blogTags,
   } = post.frontmatter
-  const _blogDate = dateFnsFormat(dateFnsParse(blogDate), 'D MMM \'YY')
+  const _blogDate = dateFnsFormat(dateFnsParse(blogDate), "D MMM 'YY")
 
   const { previous, next } = pageContext
   const nextArticle = {
@@ -31,16 +31,23 @@ const Journal = ({ data, location, pageContext }) => {
   }
 
   return (
-    <Layout
+    <App
       title={blogTitle || mainSiteTitle}
       description={blogDescription}
       location={location}
       meta={blogTags}>
-      <BlogHeader title={blogTitle} description={_blogDate} className="pb-1 px-1"/>
-      <article className="blogger px-1" dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr className="blogger-hr mb-5"/>
+      <BlogHeader
+        title={blogTitle}
+        description={_blogDate}
+        className="pb-1 px-1"
+      />
+      <article
+        className="blogger px-1"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+      <hr className="blogger-hr mb-5" />
       <BlogFooter previousArticle={previousArticle} nextArticle={nextArticle} />
-    </Layout>
+    </App>
   )
 }
 

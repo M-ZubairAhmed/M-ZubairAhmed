@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { mainSiteTags } from '../utils/constants'
+import { mainSiteTags } from './utils/constants'
 
-import ThemeContext from '../context/ThemeContext'
-import SEO from '../components/seo'
-import Navbar from '../components/navbar'
-
-import '../styles/index.scss'
-// import '../styles/bootstrap.css'
+import ThemeContext from './context/ThemeContext'
+import SEO from './components/seo'
+import Navbar from './components/navbar'
 
 const Layout = (props) => {
   return (
     <ThemeContext.Consumer>
       {(theme) => (
-        <div className={`container-section ${theme.dark ? 'dark' : 'light'}`}>
+        <div
+          className={`container-section ${
+            theme.isDarkMode ? 'dark' : 'light'
+          }`}>
           <main>
             <SEO
               title={props.title}
