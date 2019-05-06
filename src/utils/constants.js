@@ -41,3 +41,21 @@ export const socialData = [
     name: 'Email',
   },
 ]
+
+export const projectsData = [
+  {
+    title: 'Chromium Updater',
+    description:
+      'A simple Chromium updater for Linux x64. Since chromium is frequently releasing builds, this utility makes sure you have the latest version of browser.',
+    tags: ['NodeJS', 'CLI tool'],
+    sourceCode: 'https://github.com/M-ZubairAhmed/chromium-updater',
+    liveApp: 'https://www.npmjs.com/package/chromium-updater',
+  },
+  {
+    title: 'Tweetiss',
+    description:"A github bot which tweets the issues opened in your github repository.",
+    tags: ['Javascript', 'Bot',"Github API"],
+    sourceCode: 'https://github.com/M-ZubairAhmed/tweetiss',
+    liveApp: '',
+  },
+]

@@ -6,6 +6,19 @@ import dateFnsIsAfter from 'date-fns/is_after'
 
 import Jumbotron from '../components/jumbotron'
 
+const BlogCard = ({ title, excerpt, link }) => (
+  <Link to={link} key={link} className="text-decoration-none">
+    <div class="card mb-3 card-hover-effect">
+      <div class="card-body">
+        <h5 class="card-title text-dark text-decoration-none">{title}</h5>
+        <h6 class="card-subtitle mb-2 text-muted text-decoration-none">
+          {excerpt}...<strong>Continue reading</strong>
+        </h6>
+      </div>
+    </div>
+  </Link>
+)
+
 export default (props) => {
   const {
     data: {
@@ -39,18 +52,11 @@ export default (props) => {
       />
       <section className="mb-7 px-3">
         {blogs.map((blog) => (
-          <Link to={blog.path} key={blog.path} className="text-decoration-none">
-            <div class="card mb-3 card-hover-effect">
-              <div class="card-body">
-                <h5 class="card-title text-dark text-decoration-none">
-                  {blog.title}
-                </h5>
-                <h6 class="card-subtitle mb-2 text-muted text-decoration-none">
-                  {blog.excerpt}...<strong>Continue reading</strong>
-                </h6>
-              </div>
-            </div>
-          </Link>
+          <BlogCard
+            title={blog.title}
+            excerpt={blog.excerpt}
+            link={blog.path}
+          />
         ))}
       </section>
     </App>
