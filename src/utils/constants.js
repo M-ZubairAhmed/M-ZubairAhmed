@@ -53,8 +53,9 @@ export const projectsData = [
   },
   {
     title: 'Tweetiss',
-    description:"A github bot which tweets the issues opened in your github repository.",
-    tags: ['Javascript', 'Bot',"Github API"],
+    description:
+      'A github bot which tweets the issues opened in your github repository.',
+    tags: ['Javascript', 'Bot', 'Github API'],
     sourceCode: 'https://github.com/M-ZubairAhmed/tweetiss',
     liveApp: '',
   },

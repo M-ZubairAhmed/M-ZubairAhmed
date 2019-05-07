@@ -1,5 +1,7 @@
 import React from 'react'
 
+const localStorageKeyForDark = 'isDarkEnabled'
+
 const defaultState = {
   dark: false,
   toggleDark: () => {},
@@ -12,8 +14,25 @@ class ThemeProvider extends React.Component {
     isDarkMode: false,
   }
 
+  componentDidMount() {
+    const userPreferenceOfDarkMode = localStorage.getItem(
+      localStorageKeyForDark,
+    )
+    if (userPreferenceOfDarkMode !== null) {
+      if (userPreferenceOfDarkMode === 'yes') {
+        this.setState({ isDarkMode: true })
+      } else if (userPreferenceOfDarkMode === 'no') {
+        this.setState({ isDarkMode: false })
+      }
+    }
+  }
+
   toggleDark = () => {
     this.setState({ isDarkMode: !this.state.isDarkMode })
+    localStorage.setItem(
+      localStorageKeyForDark,
+      !this.state.isDarkMode ? 'yes' : 'no',
+    )
   }
 
   render() {
