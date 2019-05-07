@@ -35,7 +35,10 @@ const abortSignal = abortController.signal
 
 // later in fetch
 
-await this.props.fetch(requestURL, { method: 'GET',                                                           signal: abortSignal})
+await this.props.fetch(requestURL, {  
+    method: 'GET',
+    signal: abortSignal
+    })
 
 ```
 
