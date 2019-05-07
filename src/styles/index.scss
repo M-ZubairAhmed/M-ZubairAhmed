@@ -162,15 +162,32 @@ nav {
   color: inherit !important;
 }
 
+$fontColor: #2d2d2d;
+
 .dark {
-  background-color: #2d2d2d;
-  color: #fff;
+  background-color: $fontColor;
+  color: #fefefe;
   transition: all 0.6s ease;
+  a {
+    color: #fefefe;
+  }
 }
 
 .light {
-  transition: all 0.6s ease;
   background-color: #fefefe;
+  color: $fontColor;
+  transition: all 1s ease-in-out;
+  a {
+    color: $fontColor;
+  }
+}
+
+.color-1 {
+  color: adjust-color($color: $fontColor, $lightness: 8%, $alpha: 1);
+}
+
+.color-2 {
+  color: adjust-color($color: $fontColor, $lightness: 40%, $alpha: 1);
 }
 
 @mixin container-section-main-flexs {

@@ -8,13 +8,11 @@ import Jumbotron from '../components/jumbotron'
 
 const BlogCard = ({ title, excerpt, link }) => (
   <Link to={link} key={link} className="text-decoration-none">
-    <div class="card mb-3 card-hover-effect">
-      <div class="card-body">
-        <h5 class="card-title text-dark text-decoration-none">{title}</h5>
-        <h6 class="card-subtitle mb-2 text-muted text-decoration-none">
-          {excerpt}...<strong>Continue reading</strong>
-        </h6>
-      </div>
+    <div class="p-3 mb-4 border border-secondary rounded rounded-lg card-hover-effect">
+      <h5 class="card-title text-decoration-none">{title}</h5>
+      <h6 class="card-subtitle mb-2 color-2 text-decoration-none">
+        {excerpt}...<strong>Continue reading</strong>
+      </h6>
     </div>
   </Link>
 )

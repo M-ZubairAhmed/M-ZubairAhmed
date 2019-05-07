@@ -4,24 +4,18 @@ import { socialData } from '../utils/constants'
 
 export default () => (
   <footer className="p-4">
-    <h5 className="pb-3">
-      I can be found on the <mark>Internet</mark> via
-    </h5>
-    <ul className="list-group list-group-horizontal-xl list-group-horizontal-lg">
+    <h5 className="pb-3">I can be found on :</h5>
+    <div className="d-flex justify-content-around flex-wrap">
       {socialData.map((social) => (
-        <li
-          className="list-group-item flex-fill text-center"
-          key={social.name}
-          title={social.link}>
-          <a
-            style={{ color: '#000' }}
-            href={social.link}
-            target="_blank"
-            rel="noopener noreferrer">
-            {social.name}
-          </a>
-        </li>
+        <a
+          className="btn btn-outline-secondary mx-1 my-2"
+          href={social.link}
+          target="_blank"
+          style={{ minWidth: '10rem' }}
+          rel="noopener noreferrer">
+          {social.name}
+        </a>
       ))}
-    </ul>
+    </div>
   </footer>
 )
