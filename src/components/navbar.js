@@ -26,8 +26,9 @@ export default ({ location }) => {
             <li>
               <button
                 title="Toggle light and dark mode"
-                className={`nav-link theme-toggler btn btn-link no-text-color`}
+                className={`nav-link theme-toggler btn btn-link`}
                 data-toggle="button"
+                style={{ color: 'inherit' }}
                 onClick={theme.toggleDark}>
                 {theme.isDarkMode ? <>&#x2600; Light</> : <>&#x263D; Dark</>}
               </button>
