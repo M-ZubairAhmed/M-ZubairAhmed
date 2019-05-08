@@ -30,7 +30,7 @@ const ProjectCard = ({
       <a
         href={sourceCode}
         role="button"
-        className={`btn btn btn-light text-dark border border-secondary ${liveApp ? 'mr-3' : ''}`}
+        className={`btn btn border border-secondary card-hover-effect ${liveApp ? 'mr-3' : ''}`}
         style={{ minWidth: '8rem' }}
         target="__blank">
         Source code
@@ -39,7 +39,7 @@ const ProjectCard = ({
         <a
           href={liveApp}
           role="button"
-          className="btn btn-outline-secondary"
+          className="btn btn border border-secondary card-hover-effect "
           style={{ minWidth: '8rem' }}
           target="__blank">
           Live app
@@ -58,7 +58,7 @@ export default ({ location }) => (
       title="My Projects"
       description="Building small projects helps me immensly in learning and understanding concepts."
     />
-    <section className="mb-7 px-3">
+    <section className="mb-5 px-3">
       {projectsData.map((project) => (
         <ProjectCard {...project} />
       ))}

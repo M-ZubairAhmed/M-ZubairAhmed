@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-// Responsive Font Size modulw
+// Responsive Font Size module
 @import '../../node_modules/rfs/scss';
 
 // Breakpoints
@@ -45,8 +45,87 @@
   }
 }
 
+@mixin container-section-main-flexs {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+
+$fontColorInLightMode: #2d2d2d;
+
+
 html {
   font-family: 'Lato', sans-serif !important;
+}
+
+.container-section {
+  main {
+    @include for-phone-only {
+      max-width: 540px;
+      @include container-section-main-flexs;
+    }
+    @include for-tablet-portait-only {
+      max-width: 720px;
+      @include container-section-main-flexs;
+    }
+    @include for-tablet-portrait-up {
+      max-width: 720px;
+      @include container-section-main-flexs;
+    }
+    @include for-tablet-landscape-only {
+      max-width: 960px;
+      @include container-section-main-flexs;
+    }
+    @include for-tablet-landscape-up {
+      max-width: 960px;
+      @include container-section-main-flexs;
+    }
+    @include for-desktop-only {
+      max-width: 1140px;
+      @include container-section-main-flexs;
+    }
+    @include for-desktop-up {
+      max-width: 1140px;
+      @include container-section-main-flexs;
+    }
+    @include for-big-desktop-up {
+      max-width: 1140px;
+      @include container-section-main-flexs;
+    }
+  }
+}
+
+nav {
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.dark {
+  background-color: $fontColorInLightMode;
+  color: #fefefe;
+  transition: all 0.6s ease;
+  a {
+    color: #fefefe;
+    &:hover{
+      color : adjust-color($color: #fefefe, $lightness: -30%)
+    }
+  }
+}
+
+.light {
+  background-color: #fefefe;
+  color: $fontColorInLightMode;
+  transition: all 1s ease-in-out;
+  a {
+    color: $fontColorInLightMode;
+    &:hover{
+      color : adjust-color($color: $fontColorInLightMode, $lightness: 30%)
+    }
+  }
 }
 
 .blogger {
@@ -105,34 +184,22 @@ html {
     letter-spacing: -0.012em;
     font-style: italic;
   }
-}
-
-.blogger-header {
-  max-width: 740px;
-  padding-right: 20px !important;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.blogger-hr {
-  border-top: 4px double #8c8b8b;
-  text-align: center;
-  &:after {
-    content: '\2665';
-    display: inline-block;
-    position: relative;
-    top: -26px;
-    padding: 0 10px;
-    background: #fff;
-    color: #8c8b8b;
-    font-size: 30px;
-    border: 1px solid #8c8b8b;
-    border-radius: 30%;
+  &-hr {
+    border-top: 4px double #8c8b8b;
+    text-align: center;
+    &:after {
+      content: '\2665';
+      display: inline-block;
+      position: relative;
+      top: -26px;
+      padding: 0 10px;
+      background: #fff;
+      color: #8c8b8b;
+      font-size: 30px;
+      border: 1px solid #8c8b8b;
+      border-radius: 30%;
+    }
   }
-}
-
-.display-picture {
-  border-radius: 100%;
 }
 
 .card-hover-effect {
@@ -142,91 +209,5 @@ html {
   &:hover {
     transition: box-shadow 0.2s ease-in;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  }
-}
-
-.mb-7 {
-  margin-bottom: 6rem !important;
-}
-
-nav {
-  a {
-    color: inherit;
-    &:hover {
-      color: inherit;
-    }
-  }
-}
-
-.no-text-color {
-  color: inherit !important;
-}
-
-$fontColor: #2d2d2d;
-
-.dark {
-  background-color: $fontColor;
-  color: #fefefe;
-  transition: all 0.6s ease;
-  a {
-    color: #fefefe;
-  }
-}
-
-.light {
-  background-color: #fefefe;
-  color: $fontColor;
-  transition: all 1s ease-in-out;
-  a {
-    color: $fontColor;
-  }
-}
-
-.color-1 {
-  color: adjust-color($color: $fontColor, $lightness: 8%, $alpha: 1);
-}
-
-.color-2 {
-  color: adjust-color($color: $fontColor, $lightness: 40%, $alpha: 1);
-}
-
-@mixin container-section-main-flexs {
-  margin: 0 auto;
-  min-height: 100vh;
-}
-.container-section {
-  main {
-    @include for-phone-only {
-      max-width: 540px;
-      @include container-section-main-flexs;
-    }
-    @include for-tablet-portait-only {
-      max-width: 720px;
-      @include container-section-main-flexs;
-    }
-    @include for-tablet-portrait-up {
-      max-width: 720px;
-      @include container-section-main-flexs;
-    }
-    @include for-tablet-landscape-only {
-      max-width: 960px;
-      @include container-section-main-flexs;
-    }
-    @include for-tablet-landscape-up {
-      max-width: 960px;
-      @include container-section-main-flexs;
-    }
-    @include for-desktop-only {
-      max-width: 1140px;
-      @include container-section-main-flexs;
-    }
-    @include for-desktop-up {
-      max-width: 1140px;
-      @include container-section-main-flexs;
-    }
-    @include for-big-desktop-up {
-      max-width: 1140px;
-      @include container-section-main-flexs;
-    }
   }
 }

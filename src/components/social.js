@@ -8,7 +8,7 @@ export default () => (
     <div className="d-flex justify-content-around flex-wrap">
       {socialData.map((social) => (
         <a
-          className="btn btn-outline-secondary mx-1 my-2"
+          className="btn btn border border-secondary mx-1 my-2 card-hover-effect "
           href={social.link}
           target="_blank"
           style={{ minWidth: '10rem' }}

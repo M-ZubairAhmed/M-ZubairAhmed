@@ -48,7 +48,7 @@ export default (props) => {
         title="My Blog"
         description="Writing small blog posts, so i can share what i have experience and learned"
       />
-      <section className="mb-7 px-3">
+      <section className="mb-5 px-3">
         {blogs.map((blog) => (
           <BlogCard
             title={blog.title}
