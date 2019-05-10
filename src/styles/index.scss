@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-// Responsive Font Size module
-@import '../../node_modules/rfs/scss';
-
 // Breakpoints
 @mixin for-phone-only {
   @media (max-width: 599px) {
