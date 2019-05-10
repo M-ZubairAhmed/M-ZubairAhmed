@@ -1,5 +1,6 @@
 import React from 'react'
 import App from '../app'
+import { graphql } from 'gatsby'
 
 import Hero from '../components/hero'
 import Social from '../components/social'

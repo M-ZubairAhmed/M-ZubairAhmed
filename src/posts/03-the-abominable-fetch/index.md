@@ -1,6 +1,7 @@
 ---
 path : "/blog/the-abominable-fetch"
 date : "2019-2-16"
+serial : "3"
 title : "The Abominable Fetch"
 tags : ['FetchAPI','Axios','javascript','code clean up']
 excerpt : "Trimming down long browser Fetch API functions with Context API"

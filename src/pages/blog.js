@@ -1,8 +1,6 @@
 import React from 'react'
 import App from '../app'
 import { Link, graphql } from 'gatsby'
-import dateFnsParse from 'date-fns/parse'
-import dateFnsIsAfter from 'date-fns/is_after'
 
 import Jumbotron from '../components/jumbotron'
 
@@ -26,17 +24,12 @@ export default (props) => {
 
   const blogs = BlogsEdges.map((edge) => {
     const {
-      node: {
-        frontmatter: { date },
-      },
       node: { frontmatter },
     } = edge
 
-    const dateFormatted = dateFnsParse(date)
-
-    return { dateFormatted, ...frontmatter }
+    return frontmatter
   }).sort(
-    (blogA, blogB) => !dateFnsIsAfter(blogA.dateFormatted, blogB.dateFormatted),
+    (blogA, blogB) => parseInt(blogA.serial, 10) < parseInt(blogB.serial, 10),
   )
 
   return (
@@ -78,6 +71,7 @@ export const pageQuery = graphql`
             date
             excerpt
             path
+            serial
           }
         }
       }

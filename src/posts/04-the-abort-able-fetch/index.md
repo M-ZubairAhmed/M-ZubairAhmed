@@ -1,6 +1,7 @@
 ---
 path : "/blog/the-abort-able-fetch"
 date : "2019-3-11"
+serial : "4"
 title : "The Abort-able Fetch"
 tags : ['FetchAPI','Abortcontroller','javascript','code clean up']
 excerpt : "How to effeciently handle dangling network requests in web app."

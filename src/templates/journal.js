@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import dateFnsParse from 'date-fns/parse'
-import dateFnsFormat from 'date-fns/format'
 
 import App from '../app'
 import BlogFooter from '../components/blog-footer'
@@ -16,7 +14,12 @@ const Journal = ({ data, location, pageContext }) => {
     excerpt: blogDescription,
     tags: blogTags,
   } = post.frontmatter
-  const _blogDate = dateFnsFormat(dateFnsParse(blogDate), "D MMM 'YY")
+  const rawDate = new Date(blogDate)
+  const _blogDate = rawDate.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
   const { previous, next } = pageContext
   const nextArticle = {
