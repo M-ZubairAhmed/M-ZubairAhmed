@@ -5,51 +5,44 @@ import App from '../app'
 import BlogFooter from '../components/blog-footer'
 import BlogHeader from '../components/blog-header'
 
-const Journal = ({ data, location, pageContext }) => {
-  const post = data.markdownRemark
-  const mainSiteTitle = data.site.siteMetadata.title
+export default ({ data, location }) => {
   const {
-    title: blogTitle,
-    date: blogDate,
-    excerpt: blogDescription,
-    tags: blogTags,
-  } = post.frontmatter
-  const rawDate = new Date(blogDate)
-  const _blogDate = rawDate.toLocaleDateString('en-US', {
+    markdownRemark: {
+      timeToRead,
+      html,
+      frontmatter: {
+        title: blogTitle,
+        date,
+        excerpt: blogDescription,
+        tags: blogTags,
+      },
+    },
+  } = data
+
+  const blogDate = new Date(date).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   })
 
-  const { previous, next } = pageContext
-  const nextArticle = {
-    continueFurther: next ? true : false,
-    path: next ? next.fields.slug : '',
-    title: next ? next.frontmatter.title : '',
-  }
-  const previousArticle = {
-    continueFurther: previous ? true : false,
-    path: previous ? previous.fields.slug : '',
-    title: previous ? previous.frontmatter.title : '',
-  }
-
   return (
     <App
-      title={blogTitle || mainSiteTitle}
+      title={blogTitle}
       description={blogDescription}
       location={location}
       meta={blogTags}>
       <BlogHeader
         title={blogTitle}
-        description={_blogDate}
+        description={blogDate}
+        timeToRead={timeToRead}
         className="pb-1 px-1"
       />
       <article
         className="blogger px-1"
-        dangerouslySetInnerHTML={{ __html: post.html }}
+        dangerouslySetInnerHTML={{ __html: html }}
       />
       <hr className="blogger-hr mb-5" />
-      <BlogFooter previousArticle={previousArticle} nextArticle={nextArticle} />
+      <BlogFooter />
     </App>
   )
 }
@@ -64,8 +57,8 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date
@@ -75,5 +68,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default Journal

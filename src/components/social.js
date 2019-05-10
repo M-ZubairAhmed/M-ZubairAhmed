@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
 export default ({ allSocialsJson }) => {
   const { edges: socialsEdges } = allSocialsJson
@@ -22,17 +21,3 @@ export default ({ allSocialsJson }) => {
     </footer>
   )
 }
-
-export const pageQuery = graphql`
-  {
-    allSocialsJson {
-      edges {
-        node {
-          id
-          name
-          link
-        }
-      }
-    }
-  }
-`

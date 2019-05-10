@@ -64,7 +64,14 @@ export default ({
                     }
                   : [],
               )
-              .concat(meta)}
+              .concat(
+                meta.length > 0
+                  ? {
+                      name: 'keywords',
+                      content: meta.join(', '),
+                    }
+                  : [],
+              )}
           />
         )
       }}

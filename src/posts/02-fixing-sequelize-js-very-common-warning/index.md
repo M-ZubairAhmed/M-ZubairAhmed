@@ -1,5 +1,5 @@
 ---
-path: '/blog/fixing-sequelize-js-very-common-warning'
+path: '/blog/02-fixing-sequelize-js-very-common-warning'
 date: '2019-2-12'
 serial : "2"
 title: 'Fixing a very common warning of Sequelize.js'

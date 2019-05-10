@@ -1,5 +1,5 @@
 ---
-path : "/blog/the-abort-able-fetch"
+path : "/blog/04-the-abort-able-fetch"
 date : "2019-3-11"
 serial : "4"
 title : "The Abort-able Fetch"

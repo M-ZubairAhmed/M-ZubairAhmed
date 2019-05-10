@@ -1,5 +1,5 @@
 ---
-path : "/blog/migrating-bluebird-promises-to-native-ones"
+path : "/blog/01-migrating-bluebird-promises-to-native-ones"
 date : "2019-2-6"
 serial : "1"
 title : "Migrating Bluebird promises to native ones"

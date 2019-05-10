@@ -1,5 +1,5 @@
 ---
-path : "/blog/the-abominable-fetch"
+path : "/blog/03-the-abominable-fetch"
 date : "2019-2-16"
 serial : "3"
 title : "The Abominable Fetch"
