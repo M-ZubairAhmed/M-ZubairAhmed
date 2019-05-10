@@ -1,12 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { mainSiteTags } from './utils/constants'
 
 import ThemeContext from './context/ThemeContext'
 import SEO from './components/seo'
 import Navbar from './components/navbar'
 
-const Layout = (props) => {
+const mainSiteTags = [
+  `Software developer`,
+  `Frontend Developer`,
+  `Javascript`,
+  `ReactJS`,
+  `Portfolio Site`,
+  `Golang`,
+  `Hyderabad`,
+  'India',
+]
+
+export default (props) => {
   return (
     <ThemeContext.Consumer>
       {(theme) => (
@@ -20,6 +29,7 @@ const Layout = (props) => {
               keywords={mainSiteTags}
               description={props.description}
               meta={props.meta}
+              lang="en"
             />
             <Navbar location={props.location} />
             <div className="px-3 py-5">{props.children}</div>
@@ -29,9 +39,3 @@ const Layout = (props) => {
     </ThemeContext.Consumer>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

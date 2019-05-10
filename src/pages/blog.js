@@ -8,9 +8,9 @@ import Jumbotron from '../components/jumbotron'
 
 const BlogCard = ({ title, excerpt, link }) => (
   <Link to={link} key={link} className="text-decoration-none">
-    <div class="p-3 mb-4 border border-secondary rounded rounded-lg card-hover-effect">
-      <h5 class="card-title text-decoration-none">{title}</h5>
-      <h6 class="card-subtitle mb-2 color-2 text-decoration-none">
+    <div className="p-3 mb-4 border border-secondary rounded rounded-lg card-hover-effect">
+      <h5 className="card-title text-decoration-none">{title}</h5>
+      <h6 className="card-subtitle mb-2 color-2 text-decoration-none">
         {excerpt}...<strong>Continue reading</strong>
       </h6>
     </div>
@@ -51,6 +51,7 @@ export default (props) => {
       <section className="mb-5 px-3">
         {blogs.map((blog) => (
           <BlogCard
+            key={blog.path}
             title={blog.title}
             excerpt={blog.excerpt}
             link={blog.path}

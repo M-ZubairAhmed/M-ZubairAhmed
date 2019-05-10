@@ -4,7 +4,8 @@ import App from '../app'
 import Hero from '../components/hero'
 import Social from '../components/social'
 
-export default ({ location }) => {
+export default ({ location, data }) => {
+  const { allSocialsJson } = data
   return (
     <App
       title="A Software developer"
@@ -12,7 +13,21 @@ export default ({ location }) => {
       location={location}>
       <Hero />
       <hr />
-      <Social />
+      <Social allSocialsJson={allSocialsJson} />
     </App>
   )
 }
+
+export const pageQuery = graphql`
+  {
+    allSocialsJson {
+      edges {
+        node {
+          id
+          name
+          link
+        }
+      }
+    }
+  }
+`
