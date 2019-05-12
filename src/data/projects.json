@@ -1,5 +1,12 @@
 [
   {
+    "title": "Quiz in CLI",
+    "description": "A small quiz cli app with time limit. Quiz questions can be uploaded via CSV",
+    "tags": ["Golang", "Command line interface"],
+    "sourceCode": "https://github.com/M-ZubairAhmed/quiz-in-cli",
+    "liveApp": ""
+  },
+  {
     "title": "Chromium Updater",
     "description": "A simple Chromium updater for Linux x64. Since chromium is frequently releasing builds, this utility makes sure you have the latest version of browser.",
     "tags": ["Nodejs", "Command line interface"],
@@ -12,5 +19,12 @@
     "tags": ["Javascript", "Bot", "Github API"],
     "sourceCode": "https://github.com/M-ZubairAhmed/tweetiss",
     "liveApp": ""
-  }
+  },
+  {
+    "title": "Battery prophet",
+    "description": "Browser reminder that encourages best battery practices for your laptop by sending reminders on when to connect and disconnect the power",
+    "tags": ["Nodejs", "Linux app" "Battery management"],
+    "sourceCode": "https://github.com/M-ZubairAhmed/quiz-in-cli",
+    "liveApp": ""
+  },
 ]
