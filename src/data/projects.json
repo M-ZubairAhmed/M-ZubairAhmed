@@ -23,8 +23,8 @@
   {
     "title": "Battery prophet",
     "description": "Browser reminder that encourages best battery practices for your laptop by sending reminders on when to connect and disconnect the power",
-    "tags": ["Nodejs", "Linux app" "Battery management"],
+    "tags": ["Nodejs", "Linux app", "Battery management"],
     "sourceCode": "https://github.com/M-ZubairAhmed/quiz-in-cli",
     "liveApp": ""
-  },
+  }
 ]
