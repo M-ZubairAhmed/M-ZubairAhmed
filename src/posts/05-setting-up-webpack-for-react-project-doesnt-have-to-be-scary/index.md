@@ -1,9 +1,19 @@
 ---
 path: '/blog/05-setting-up-webpack-for-react-project-doesnt-have-to-be-scary'
 date: '2019-5-08'
-serial : "5"
+serial: '5'
 title: 'Setting up webpack for react project doesnt have to be scary'
-tags: ['webpack', 'javascript', 'babeljs','prettier','webpack-dev-server','build-tools','starter-kits','boilerplate']
+tags:
+  [
+    'webpack',
+    'javascript',
+    'babeljs',
+    'prettier',
+    'webpack-dev-server',
+    'build-tools',
+    'starter-kits',
+    'boilerplate',
+  ]
 excerpt: 'Lets setup webpack for starting a react app from scratch using as little as configuration possible. We will setup webpack, babel,prettier and styling for our tiny app.'
 ---
 
@@ -28,17 +38,17 @@ yarn add react react-dom
 
 ### [Install webpack](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/29e5cdb7463dc404f74506918f72cf6cb3302427)
 
-Install core [webpack](https://github.com/webpack/webpack) package as *devDependencies and along with that lets also add another two webpack packages; [webpack cli](https://github.com/webpack/webpack-cli), which will be required if we are to run webpack with command line or via npm scripts and [webpack-dev-server](https://github.com/webpack/webpack-dev-server), this packages gets us up and running our local dev environment without too much hassle of making our own server.
+Install core [webpack](https://github.com/webpack/webpack) package as \*devDependencies and along with that lets also add another two webpack packages; [webpack cli](https://github.com/webpack/webpack-cli), which will be required if we are to run webpack with command line or via npm scripts and [webpack-dev-server](https://github.com/webpack/webpack-dev-server), this packages gets us up and running our local dev environment without too much hassle of making our own server.
 
 ```bash
 yarn add --dev webpack webpack-cli webpack-dev-server
 ```
 
-_* devDependencies : are those packages which you would not like to include in the app, but only while building or developing them._
+_\* devDependencies : are those packages which you would not like to include in the app, but only while building or developing them._
 
 ### [Install prettier](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/7d0474cba6fda4a579b2e6ff0d5dc6e07d50b506)
 
-[Prettier](https://prettier.io/) provides beautifully code formatting. As this has nothing to do with the production code, we are only going to use it while developing code, So install this as devDep too.
+[Prettier](https://prettier.io/) provides beautifully code formatting. As this has nothing to do with the production code, we are only going to use it while developing code, So install this as devDependency too.
 
 ```bash
 yarn add prettier --dev --exact
@@ -48,19 +58,19 @@ There are lots of configurations available to suite your preferences. Head over 
 
 ```javascript
 module.exports = {
-    trailingComma: 'all',
-    semi: false,
-  }
+  trailingComma: 'all',
+  semi: false,
+}
 ```
 
 ### [Write some react code](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/491dd4a9f5168232c2afe4c988051d9c49d35dee)
 
-Create a folder named `src` in your root and add files `index.js` to it. 
+Create a folder named `src` in your root and add files `index.js` to it.
 Index.js will be starting point of src. Currently the file is simple, it can be extended later. Follow [here](https://reactjs.org/docs/hello-world.html) to lean how to write react code.
 
 ```javascript
-import React from "react"
-import { render } from "react-dom"
+import React from 'react'
+import { render } from 'react-dom'
 
 const App = () => (
   <div>
@@ -69,7 +79,7 @@ const App = () => (
   </div>
 )
 
-render(<App />, document.getElementById("REACT_ROOT"))
+render(<App />, document.getElementById('REACT_ROOT'))
 ```
 
 ### [Run the app](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/ea1684f0005f076ef85601582d6b8968dcfbb818)
@@ -88,8 +98,8 @@ Now app can start with a simple command in terminal
 yarn start
 ```
 
-You might see webpack related content appearing in your terminal and finally ending with an error. If error is something on the lines of __You may need an appropriate loader to handle this file type__ or related. Then don't worry you have followed instructions correctly. Lets tackle that error in next section. Go drink a glass of water.
-On side note, You might have noticed that webpack was able to identify the code you wrote in _src/index.js_  without you having to provide it with any configuration. Thats because webpack now provides lots of default to get you going soon. Hence placing `index.js` file under `src` was the [default entry point](https://webpack.js.org/concepts#entry) for webpack. 
+You might see webpack related content appearing in your terminal and finally ending with an error. If error is something on the lines of **You may need an appropriate loader to handle this file type** or related. Then don't worry you have followed instructions correctly. Lets tackle that error in next section. Go drink a glass of water.
+On side note, You might have noticed that webpack was able to identify the code you wrote in _src/index.js_ without you having to provide it with any configuration. Thats because webpack now provides lots of default to get you going soon. Hence placing `index.js` file under `src` was the [default entry point](https://webpack.js.org/concepts#entry) for webpack.
 
 ### Transpiling Javascript code
 
@@ -114,17 +124,17 @@ By adding the package, webpack still wont be aware of babel. To do that lets add
 ```javascript
 module.exports = {
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, use: "babel-loader" }],
+    rules: [{ test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }],
   },
 }
 ```
 
-With the above we are saying that we would first like to run [babel-loader](https://github.com/babel/babel-loader) on all __js__ file except the ones in _node_modules_.
+With the above we are saying that we would first like to run [babel-loader](https://github.com/babel/babel-loader) on all **js** file except the ones in `node_modules`
 
 ### [Configuring babel](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/c2ce7526e0bed1a3b72081009a66ec8747292f0b)
 
-Ok, now you've configured Babel but you haven't made it actually do anything. Lets create `babel.config.js` in our root. Babel depends on many plugins to do its job. These plugin contains instruction on how to parse the code to more compatible one. 
-Lets add few plugins that we require. To start, add [env preset](https://babeljs.io/docs/en/babel-preset-env), which enables transforms for ES2015+ and  [react preset](https://babeljs.io/docs/en/babel-preset-react), which contains most common plugin used along with React. You are free to add and [include others](https://babeljs.io/docs/en/plugins). Presets are just a bunch of plugins grouped together.
+Ok, now you've configured Babel but you haven't made it actually do anything. Lets create `babel.config.js` in our root. Babel depends on many plugins to do its job. These plugin contains instruction on how to parse the code to more compatible one.
+Lets add few plugins that we require. To start, add [env preset](https://babeljs.io/docs/en/babel-preset-env), which enables transforms for ES2015+ and [react preset](https://babeljs.io/docs/en/babel-preset-react), which contains most common plugin used along with React. You are free to add and [include others](https://babeljs.io/docs/en/plugins). Presets are just a bunch of plugins grouped together.
 
 ```javascript
 module.exports = function(api) {
@@ -133,7 +143,7 @@ module.exports = function(api) {
     api.cache.using(() => process.env.NODE_ENV)
   }
 
-  const presets = ["@babel/preset-env", "@babel/preset-react"]
+  const presets = ['@babel/preset-env', '@babel/preset-react']
 
   const plugins = []
 
@@ -152,7 +162,7 @@ Lets run the start command we ran previously. Just a slight modification before 
 "start": "node_modules/.bin/webpack-dev-server --config webpack.dev.config.js",
 ```
 
-Now you must be seeing that our terminal didn't threw any error when we starter the server. You may now go to the localhost which is mentioned there. Dont be disappointed if you see just bunch of folders over in your website, we havent configured the app to output __HTML__ yet so its just showing us the content of the website instead.
+Now you must be seeing that our terminal didn't threw any error when we starter the server. You may now go to the localhost which is mentioned there. Dont be disappointed if you see just bunch of folders over in your website, we havent configured the app to output **HTML** yet so its just showing us the content of the website instead.
 
 ### [Make app spit html](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/7612a5cb99635fb0d87b983304ac3a1264893269)
 
@@ -167,14 +177,13 @@ Create an html file, which will be served by our app in _src_ folder and add jus
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>React scaffolding kit</title>
-    </head>
+  <head>
+    <title>React scaffolding kit</title>
+  </head>
 
-    <body>
-        <div id="REACT_ROOT"></div>
-    </body>
-
+  <body>
+    <div id="REACT_ROOT"></div>
+  </body>
 </html>
 ```
 
@@ -185,21 +194,21 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, use: "babel-loader" }],
+    rules: [{ test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }],
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
 }
 ```
 
-Once its done, you can restart the app from _start_ script. Now the app should greet you with __React scaffolding kit__ written big in H1 tags.
+Once its done, you can restart the app from _start_ script. Now the app should greet you with **React scaffolding kit** written big in H1 tags.
 
 ### [Add styling](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/9b02e51d8b35b554c3e2f3407a48ea8af5ee12e2)
 
-The app looks rather bland, lets now add the ability to add styles. I am going to add __SCSS__ support because i feel thats the best way to write CSS. Create a new file inside src directory and name it `index.scss`.
+The app looks rather bland, lets now add the ability to add styles. I am going to add **SCSS** support because i feel thats the best way to write CSS. Create a new file inside src directory and name it `index.scss`.
 
 ```scss
 h1 {
@@ -240,18 +249,18 @@ Congratulations you have now a minimal react app bootstrapped with webpack up an
 
 Lets see what have we done till now
 
-- [X] Installed required libraries such as react , webpack etc.
-- [X] Setup prettier for code formatting
-- [X] Added webpack and a basic configuration
-- [X] Configured Babel and connected it to webpack
-- [X] Attached plugin to render HTML from webpack
-- [X] Styled app with scss and styling loaders
+- [x] Installed required libraries such as react , webpack etc.
+- [x] Setup prettier for code formatting
+- [x] Added webpack and a basic configuration
+- [x] Configured Babel and connected it to webpack
+- [x] Attached plugin to render HTML from webpack
+- [x] Styled app with scss and styling loaders
 
 ## More setup
 
 Communities around react, webpack etc are huge, as such we have some very powerful support libraries, plugins to work with. Let see what more we could do with the above setup
 
-- [ ] We could add  [seperate webpack config](https://webpack.js.org/configuration/#use-different-config-file) for production use.
+- [ ] We could add [seperate webpack config](https://webpack.js.org/configuration/#use-different-config-file) for production use.
 - [ ] Add more webpack plugins as required such as one for [copying assets folder](https://webpack.js.org/plugins/copy-webpack-plugin/#root), [minimizing css files](https://webpack.js.org/plugins/mini-css-extract-plugin/#root), [adding global constants](https://webpack.js.org/plugins/define-plugin), [optimizing the build](https://webpack.js.org/configuration/optimization/#root).
 - [ ] Have webpack [code split](https://webpack.js.org/guides/code-splitting/#root) with split chunks.
 - [ ] Have [resolved path](https://webpack.js.org/configuration/resolve/#root) to our source file, so we can directly import like we do for node_modules.
@@ -259,6 +268,6 @@ Communities around react, webpack etc are huge, as such we have some very powerf
 - [ ] Make robust server in your choice language for [serving production code](https://webpack.js.org/guides/production/#root).
 - [ ] and much more
 
-> The configuration and build one uses for production varies from application to application. 
+> The configuration and build one uses for production varies from application to application.
 
 This blog post purpose was to get you familiar with setting up a tiny, less configuration webpack setup for you next react project.
