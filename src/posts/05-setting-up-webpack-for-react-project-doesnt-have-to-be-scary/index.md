@@ -3,6 +3,7 @@ path: '/blog/05-setting-up-webpack-for-react-project-doesnt-have-to-be-scary'
 date: '2019-5-08'
 serial: '5'
 title: 'Setting up webpack for react project doesnt have to be scary'
+cover: 'https://user-images.githubusercontent.com/17708702/60149807-94c07a00-97f3-11e9-89e7-67a03d911df9.jpg'
 tags:
   [
     'webpack',

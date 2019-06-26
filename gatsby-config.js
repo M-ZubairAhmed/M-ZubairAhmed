@@ -3,9 +3,9 @@ module.exports = {
   siteMetadata: {
     title: `M-ZubairAhmed`,
     description: `Zubair's space on the web`,
-    url: 'https://mzubairahmed.ml/',
-    twitterUsername: '@Md_ZubairAhmed/',
-    author: `@M-ZubairAhmed/`,
+    url: 'https://mzubairahmed.ml',
+    twitterUsername: '@Md_ZubairAhmed',
+    author: `M-ZubairAhmed`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
