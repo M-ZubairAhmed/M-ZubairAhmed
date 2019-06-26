@@ -29,6 +29,8 @@ export default (props) => {
               keywords={mainSiteTags}
               description={props.description}
               meta={props.meta}
+              coverPhoto={props.coverPhoto}
+              path={props.path}
               lang="en"
             />
             <Navbar location={props.location} />

@@ -15,6 +15,8 @@ export default ({ data, location }) => {
         date,
         excerpt: blogDescription,
         tags: blogTags,
+        cover: blogCoverImage,
+        path: blogPath,
       },
     },
   } = data
@@ -29,8 +31,11 @@ export default ({ data, location }) => {
     <App
       title={blogTitle}
       description={blogDescription}
+      image={blogCoverImage}
       location={location}
-      meta={blogTags}>
+      meta={blogTags}
+      coverPhoto={blogCoverImage}
+      path={blogPath}>
       <BlogHeader
         title={blogTitle}
         description={blogDate}
@@ -64,6 +69,8 @@ export const pageQuery = graphql`
         date
         tags
         excerpt
+        cover
+        path
       }
     }
   }
