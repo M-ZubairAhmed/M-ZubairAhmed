@@ -1,10 +1,11 @@
 ---
-path : "/blog/04-the-abort-able-fetch"
-date : "2019-3-11"
-serial : "4"
-title : "The Abort-able Fetch"
-tags : ['FetchAPI','Abortcontroller','javascript','code clean up']
-excerpt : "How to effeciently handle dangling network requests in web app."
+path: '/blog/04-the-abort-able-fetch'
+date: '2019-3-11'
+serial: '4'
+title: 'The Abort-able Fetch'
+cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562127661/marius-serban-Bsway5_hstw-unsplash_mas3hc.jpg'
+tags: ['FetchAPI', 'Abortcontroller', 'javascript', 'code clean up']
+excerpt: 'How to effeciently handle dangling network requests in web app.'
 ---
 
 Fetch API have come a long way into becoming a more mature, stable and supportive Web API. We use it extensively in our app. However we weren’t using its abort-able functionality i.e to stop or terminate requests in mid way. Support for abort able fetch was proposed in 2̶0̶1̶5̶ forever ago. Then in 2017 it finally was included in the standard and Edge was first to support it. Now it [mostly supported](https://caniuse.com/#feat=abortcontroller) amongst browsers.
@@ -14,11 +15,11 @@ Fetch API have come a long way into becoming a more mature, stable and supportiv
 Still to support other browsers we use `whatwg-fetch` , which is a polyfill that implements Fetch whatwg [specifications](https://fetch.spec.whatwg.org/). In addition to that, we had to see if abort able feature was natively supported in the browser ; if not then we use poly filled fetch.
 
 ```javascript
-import { fetch as fetchPloyfilled } from 'whatwg-fetch';
+import { fetch as fetchPloyfilled } from 'whatwg-fetch'
 
 const isAbortableFetchSupported = 'signal' in new Request('')
 
-const _fetch = isAbortableFetchSupported ? window.fetch : fetchPloyfilled;
+const _fetch = isAbortableFetchSupported ? window.fetch : fetchPloyfilled
 
 // _fetch is then passed down via props to be used in app
 ```
@@ -36,7 +37,7 @@ const abortSignal = abortController.signal
 
 // later in fetch
 
-await this.props.fetch(requestURL, {  
+await this.props.fetch(requestURL, {
     method: 'GET',
     signal: abortSignal
     })
@@ -46,7 +47,7 @@ await this.props.fetch(requestURL, {
 ### Aborting
 
 ```javascript
-abortController.abort();
+abortController.abort()
 ```
 
 Calling the above method will stop your fetch promise and throw an error, which you will need to catch and handle properly.

@@ -1,10 +1,11 @@
 ---
-path : "/blog/03-the-abominable-fetch"
-date : "2019-2-16"
-serial : "3"
-title : "The Abominable Fetch"
-tags : ['FetchAPI','Axios','javascript','code clean up']
-excerpt : "Trimming down long browser Fetch API functions with Context API"
+path: '/blog/03-the-abominable-fetch'
+date: '2019-2-16'
+serial: '3'
+title: 'The Abominable Fetch'
+cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562130351/chelsea-bock-S-U6ipzt4Lw-unsplash_lgekpy.jpg'
+tags: ['FetchAPI', 'Axios', 'javascript', 'code clean up']
+excerpt: 'Trimming down long browser Fetch API functions with Context API'
 ---
 
 The first question i get is why use Fetch API instead of Axios library. Well there are many post online which do well to show the similarities and differences in both libraries. Well for us what worked will be discussed some other time.
@@ -51,43 +52,42 @@ The createFetch wrapper consists of defaults which will add to the options of fe
 ```javascript
 let options = {};
 
-// language variable is passed down from createFetch params. 
+// language variable is passed down from createFetch params.
 options.headers[’Accept-Language’] = language;
 
 
-// Since mostly JSON object is returned. 
+// Since mostly JSON object is returned.
 options.headers[’Content-Type’] = 'application/json’;
 
 
-// authToken variable is passed from createFetch params. 
+// authToken variable is passed from createFetch params.
 options.headers.Authorization = `token ${authToken}`;
 ```
 
 #### Mode
 
 ```javascript
-options.mode = 'cors';
+options.mode = 'cors'
 ```
 
 #### Credentials
 
 ```javascript
-options.credentials = 'same-origin';
+options.credentials = 'same-origin'
 ```
 
 All the above options are only alloted if they are not explicitly passed. Concluding the defaults we then return the function as follows:
 
 ```javascript
-fetch(url, options);
+fetch(url, options)
 ```
 
 End result
 
 ```javascript
 await this.props.fetch(URL_GOES_HERE, {
-   method: 'GET'
-   }
- );
+  method: 'GET',
+})
 ```
 
 This resulted in a clean and crisp fetch function. Since it was passed down though context, fetch was accessed via props. However the above function is completely flexible to other values.
