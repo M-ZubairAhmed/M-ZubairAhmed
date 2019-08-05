@@ -51,6 +51,11 @@ export default ({ location }) => {
                 {basePage === 'projects' ? <u>Projects</u> : <>Projects</>}
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/contact" className={`nav-link`} title="Go to Projects">
+                {basePage === 'contact' ? <u>Say Hi</u> : <>Say Hi</>}
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
