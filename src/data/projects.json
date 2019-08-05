@@ -1,10 +1,17 @@
 [
   {
+    "title": "Sardene",
+    "description": "App ideas to hack your next personal project for coming weekend.",
+    "tags": ["Golang", "Reactjs"],
+    "sourceCode": "https://github.com/M-ZubairAhmed/sardene-app",
+    "liveApp": "https://sardene.cf"
+  },
+  {
     "title": "AtomURL",
     "description": "A fast and secure url shortener without trackers or adds. https://mzubairahmed.ml/blog/04-the-abort-able-fetch can be atomurl.ga/go/blog-fetch",
     "tags": ["Golang", "Reactjs"],
     "sourceCode": "https://github.com/M-ZubairAhmed/atomURL",
-    "liveApp": "https://atomurl.ga/"
+    "liveApp": "https://atomurl.ga"
   },
   {
     "title": "Quiz in CLI",
