@@ -13,7 +13,7 @@ export default ({ location, data }) => {
       location={location}>
       <section className="mb-5 px-3">
         <Jumbotron
-          title="Want to say Hi?"
+          title="Lets get connected."
           description="Drop me a line on twitter, my DMs are open"
         />
         <Social allSocialsJson={allSocialsJson} />
@@ -27,7 +27,7 @@ const Social = ({ allSocialsJson }) => {
   return (
     <footer className="py-5">
       <div className="d-flex justify-content-around flex-wrap">
-        {socialsEdges.map(({ node: { id, name, link } }) => (
+        {socialsEdges.map(({ node: { id, name, link, username } }) => (
           <a
             key={id}
             className="btn btn border border-secondary mx-1 my-2 card-hover-effect "
@@ -35,7 +35,7 @@ const Social = ({ allSocialsJson }) => {
             target="_blank"
             style={{ minWidth: '10rem' }}
             rel="noopener noreferrer">
-            {name}
+            {name} : {username}
           </a>
         ))}
       </div>
@@ -51,6 +51,7 @@ export const pageQuery = graphql`
           id
           name
           link
+          username
         }
       }
     }

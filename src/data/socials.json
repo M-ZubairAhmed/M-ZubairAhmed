@@ -1,14 +1,17 @@
 [
   {
     "link": "https://twitter.com/Md_ZubairAhmed/",
-    "name": "Twitter"
+    "username": "@Md_ZubairAhmed",
+    "name": "Twitter handle"
   },
   {
     "link": "https://github.com/M-ZubairAhmed/",
-    "name": "Github"
+    "username": "M-ZubairAhmed",
+    "name": "Github username"
   },
   {
     "link": "https://www.linkedin.com/in/md-zubairahmed/",
-    "name": "Linkedin"
+    "username": "md-zubairahmed",
+    "name": "Linkedin profile"
   }
 ]
