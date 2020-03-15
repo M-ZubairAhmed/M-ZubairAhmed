@@ -34,9 +34,7 @@ const ProjectCard = ({
       <a
         href={sourceCode}
         role="button"
-        className={`btn btn border border-secondary card-hover-effect ${
-          liveApp ? 'mr-3' : ''
-        }`}
+        className={`btn btn border border-secondary ${liveApp ? 'mr-3' : ''}`}
         style={{ minWidth: '8rem' }}
         target="__blank">
         Source code
@@ -45,7 +43,7 @@ const ProjectCard = ({
         <a
           href={liveApp}
           role="button"
-          className="btn btn border border-secondary card-hover-effect "
+          className="btn btn border border-secondary "
           style={{ minWidth: '8rem' }}
           target="__blank">
           Live app
@@ -62,11 +60,11 @@ export default ({ location, data }) => {
   return (
     <App
       title="Projects"
-      description="Building small projects helps me immensly in learning and understanding concepts."
+      description="Building small projects helps me in learning and understanding concepts."
       location={location}>
       <Jumbotron
         title="My Projects"
-        description="Building small projects helps me immensly in learning and understanding concepts."
+        description="Building small projects helps me in learning and understanding concepts."
       />
       <section className="mb-5 px-3">
         {projectsNode.map((project) => (

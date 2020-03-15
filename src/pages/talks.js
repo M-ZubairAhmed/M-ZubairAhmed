@@ -34,11 +34,11 @@ export default (props) => {
 
   return (
     <App
-      title="Talks"
+      title="My Talks"
       description="I try to get engaged with the community by talks, meetups, discussions."
       location={props.location}>
       <Jumbotron
-        title="Talks"
+        title="My Talks"
         description="I try to get engaged with the community by talks, meetups, discussions."
       />
       <section className="mb-5 px-3">

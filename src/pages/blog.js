@@ -27,7 +27,7 @@ export default (props) => {
       description="Writing small blog posts, so i can share what i have learned and experienced"
       location={props.location}>
       <Jumbotron
-        title="My Blog"
+        title="My Blogposts"
         description="Writing small blog posts, so i can share what i have experience and learned"
       />
       <section className="mb-5 px-3">

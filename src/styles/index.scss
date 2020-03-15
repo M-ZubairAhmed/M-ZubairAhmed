@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-// Comment in prod
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
-
 // Breakpoints
 @mixin for-phone-only {
   @media (max-width: 599px) {
@@ -89,15 +86,6 @@ html {
     @include for-big-desktop-up {
       max-width: 1140px;
       @include container-section-main-flexs;
-    }
-  }
-}
-
-nav {
-  a {
-    color: inherit;
-    &:hover {
-      color: inherit;
     }
   }
 }
@@ -207,15 +195,5 @@ nav {
       border: 1px solid #8c8b8b;
       border-radius: 30%;
     }
-  }
-}
-
-.card-hover-effect {
-  transition: all 0.2s ease-in;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
-
-  &:hover {
-    transition: box-shadow 0.2s ease-in;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
 }

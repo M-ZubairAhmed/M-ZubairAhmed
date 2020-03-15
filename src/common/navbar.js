@@ -23,16 +23,6 @@ export default ({ location }) => {
                 {basePage === '' ? <u>&#8484;ubair</u> : <>&#8484;ubair</>}
               </Link>
             </li>
-            <li>
-              <button
-                title="Toggle light and dark mode"
-                className={`nav-link theme-toggler btn btn-link`}
-                data-toggle="button"
-                style={{ color: 'inherit' }}
-                onClick={theme.toggleDark}>
-                {theme.isDarkMode ? <>&#x2600; Light</> : <>&#x263D; Dark</>}
-              </button>
-            </li>
             <li className="nav-item">
               <Link
                 to="/blog"
@@ -61,10 +51,15 @@ export default ({ location }) => {
                 {basePage === 'projects' ? <u>Projects</u> : <>Projects</>}
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/contact" className={`nav-link`} title="Go to Projects">
-                {basePage === 'contact' ? <u>Say Hi</u> : <>Say Hi</>}
-              </Link>
+            <li>
+              <a
+                title="Toggle light and dark mode"
+                className={`nav-link`}
+                data-toggle="button"
+                href="#"
+                onClick={theme.toggleDark}>
+                {theme.isDarkMode ? 'Lighten' : 'Darken'}
+              </a>
             </li>
           </ul>
         </nav>
