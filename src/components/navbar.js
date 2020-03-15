@@ -45,6 +45,16 @@ export default ({ location }) => {
             </li>
             <li className="nav-item">
               <Link
+                to="/talks"
+                className={`nav-link ${
+                  basePage === 'talks' ? 'text-underline' : ''
+                }`}
+                title="Go to Talks">
+                {basePage === 'talks' ? <u>Talks</u> : <>Talks</>}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/projects"
                 className={`nav-link`}
                 title="Go to Projects">
