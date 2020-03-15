@@ -5,9 +5,7 @@ export default class BlogFooter extends React.Component {
     e.preventDefault()
   }
 
-componentDidMount(){
-
-}
+  componentDidMount() {}
 
   render() {
     return (
