@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import App from '../app'
-import Jumbotron from '../components/jumbotron'
+import { Jumbotron } from '../common/components'
 
 const ProjectCard = ({
   id = '',

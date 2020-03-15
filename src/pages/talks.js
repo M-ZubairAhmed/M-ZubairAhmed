@@ -2,7 +2,7 @@ import React from 'react'
 import App from '../app'
 import { Link, graphql } from 'gatsby'
 
-import Jumbotron from '../components/jumbotron'
+import { Jumbotron } from '../common/components'
 
 const BlogCard = ({ title, excerpt, link }) => (
   <Link to={link} key={link} className="text-decoration-none">

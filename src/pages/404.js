@@ -13,6 +13,11 @@ export default () => (
           Redirect to my blog
         </button>
       </Link>
+      <Link to="/" className="nav-link text-secondary">
+        <button type="button" className="btn btn-dark btn-lg btn-block">
+          Go to home
+        </button>
+      </Link>
     </div>
   </App>
 )

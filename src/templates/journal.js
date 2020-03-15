@@ -2,8 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import App from '../app'
-import BlogFooter from '../components/blog-footer'
-import BlogHeader from '../components/blog-header'
+import { BlogFooter, BlogHeader } from '../common/components'
 
 export default ({ data, location }) => {
   const {

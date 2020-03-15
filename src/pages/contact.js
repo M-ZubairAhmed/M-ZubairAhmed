@@ -1,7 +1,8 @@
 import React from 'react'
 import App from '../app'
 import { graphql } from 'gatsby'
-import Jumbotron from '../components/jumbotron'
+
+import { Jumbotron } from '../common/components'
 
 export default ({ location, data }) => {
   const { allSocialsJson } = data

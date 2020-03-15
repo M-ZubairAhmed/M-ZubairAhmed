@@ -1,8 +1,8 @@
 import React from 'react'
 
 import ThemeContext from './context/ThemeContext'
-import SEO from './components/seo'
-import Navbar from './components/navbar'
+import SEO from './common/seo'
+import Navbar from './common/navbar'
 
 const mainSiteTags = [
   `Software developer`,
