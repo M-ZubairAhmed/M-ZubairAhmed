@@ -19,10 +19,7 @@ export default (props) => {
   return (
     <ThemeContext.Consumer>
       {(theme) => (
-        <div
-          className={`container-section ${
-            theme.isDarkMode ? 'dark' : 'light'
-          }`}>
+        <div className={`${theme.isDarkMode ? 'dark' : 'light'}`}>
           <main>
             <SEO
               title={props.title}
