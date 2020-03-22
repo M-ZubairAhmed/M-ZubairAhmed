@@ -1,8 +1,8 @@
 ---
-path: '/blog/05-setting-up-webpack-for-react-project-doesnt-have-to-be-scary'
+path: '/blog/05-setting-up-webpack-for-react-project-doesn't-have-to-be-scary'
 date: '2019-5-08'
 serial: '5'
-title: 'Setting up webpack for react project doesnt have to be scary'
+title: 'Setting up webpack for react project doesn't have to be scary'
 cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562127221/toa-heftiba-ZWKNDOjwito-unsplash_lf5nub.jpg'
 tags:
   [
@@ -16,6 +16,7 @@ tags:
     'boilerplate',
   ]
 excerpt: 'Lets setup webpack for starting a react app from scratch using as little as configuration possible. We will setup webpack, babel,prettier and styling for our tiny app.'
+status: 'published'
 ---
 
 If you would have asked me few days weeks ago, to setup a complete build and boiler system for new react project, i would have handed you a [C.R.A](https://github.com/facebook/create-react-app).
@@ -76,7 +77,7 @@ import { render } from 'react-dom'
 const App = () => (
   <div>
     <h1>React scaffolding kit</h1>
-    <strong>An opiniated but customizable react starter kit</strong>
+    <strong>An opinionated but customizable react starter kit</strong>
   </div>
 )
 
@@ -102,7 +103,7 @@ yarn start
 You might see webpack related content appearing in your terminal and finally ending with an error. If error is something on the lines of **You may need an appropriate loader to handle this file type** or related. Then don't worry you have followed instructions correctly. Lets tackle that error in next section. Go drink a glass of water.
 On side note, You might have noticed that webpack was able to identify the code you wrote in _src/index.js_ without you having to provide it with any configuration. Thats because webpack now provides lots of default to get you going soon. Hence placing `index.js` file under `src` was the [default entry point](https://webpack.js.org/concepts#entry) for webpack.
 
-### Transpiling Javascript code
+### Transpile Javascript code
 
 The error we stumbled, means our server wasn't able to understand the code we wrote. It was not compatible with what usually browsers understand. To be able to make it understand we transpile our code to much better browser understanding code with [Babeljs](https://babeljs.io).
 
@@ -120,7 +121,7 @@ yarn add --dev babel-loader
 
 ### [Connecting babel and webpack](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/f1ece0ce227b351fff4892955e3bb46574a1d4a0)
 
-By adding the package, webpack still wont be aware of babel. To do that lets add in a configuration file for webpack, and name it `webpack.dev.config.js`. Why dev in the name ? thats because we would like to keep our production and dev webpack configuration seperate.
+By adding the package, webpack still wont be aware of babel. To do that lets add in a configuration file for webpack, and name it `webpack.dev.config.js`. Why dev in the name ? thats because we would like to keep our production and dev webpack configuration separate.
 
 ```javascript
 module.exports = {
@@ -138,7 +139,7 @@ Ok, now you've configured Babel but you haven't made it actually do anything. Le
 Lets add few plugins that we require. To start, add [env preset](https://babeljs.io/docs/en/babel-preset-env), which enables transforms for ES2015+ and [react preset](https://babeljs.io/docs/en/babel-preset-react), which contains most common plugin used along with React. You are free to add and [include others](https://babeljs.io/docs/en/plugins). Presets are just a bunch of plugins grouped together.
 
 ```javascript
-module.exports = function(api) {
+module.exports = function (api) {
   if (api) {
     //   https://babeljs.io/docs/en/config-files#apicache
     api.cache.using(() => process.env.NODE_ENV)
@@ -163,7 +164,7 @@ Lets run the start command we ran previously. Just a slight modification before 
 "start": "node_modules/.bin/webpack-dev-server --config webpack.dev.config.js",
 ```
 
-Now you must be seeing that our terminal didn't threw any error when we starter the server. You may now go to the localhost which is mentioned there. Dont be disappointed if you see just bunch of folders over in your website, we havent configured the app to output **HTML** yet so its just showing us the content of the website instead.
+Now you must be seeing that our terminal didn't threw any error when we starter the server. You may now go to the localhost which is mentioned there. Don't be disappointed if you see just bunch of folders over in your website, we haven't configured the app to output **HTML** yet so its just showing us the content of the website instead.
 
 ### [Make app spit html](https://github.com/M-ZubairAhmed/react-scaffolding-kit/commit/7612a5cb99635fb0d87b983304ac3a1264893269)
 
@@ -223,13 +224,13 @@ Include the styles in your `index.js` by importing them.
 import './index.scss'
 ```
 
-But as you have noticed, styling doesnt seems to be picked up by the app. Reason for that there is only so much webpack can do on its own. We will have to provide a way for webpack to include the styling in the app, here comes webpack loaders to rescue.
+But as you have noticed, styling doesn't seems to be picked up by the app. Reason for that there is only so much webpack can do on its own. We will have to provide a way for webpack to include the styling in the app, here comes webpack loaders to rescue.
 
 ```sh
 yarn add --dev style-loader css-loader sass-loader node-sass
 ```
 
-Lets look at what those are by adding them in the configuration. Add a new object inside your `modeuls/rules` in webpack config.
+Lets look at what those are by adding them in the configuration. Add a new object inside your `models/rules` in webpack config.
 
 ```js
 {
@@ -261,7 +262,7 @@ Lets see what have we done till now
 
 Communities around react, webpack etc are huge, as such we have some very powerful support libraries, plugins to work with. Let see what more we could do with the above setup
 
-- [ ] We could add [seperate webpack config](https://webpack.js.org/configuration/#use-different-config-file) for production use.
+- [ ] We could add [separate webpack config](https://webpack.js.org/configuration/#use-different-config-file) for production use.
 - [ ] Add more webpack plugins as required such as one for [copying assets folder](https://webpack.js.org/plugins/copy-webpack-plugin/#root), [minimizing css files](https://webpack.js.org/plugins/mini-css-extract-plugin/#root), [adding global constants](https://webpack.js.org/plugins/define-plugin), [optimizing the build](https://webpack.js.org/configuration/optimization/#root).
 - [ ] Have webpack [code split](https://webpack.js.org/guides/code-splitting/#root) with split chunks.
 - [ ] Have [resolved path](https://webpack.js.org/configuration/resolve/#root) to our source file, so we can directly import like we do for node_modules.

@@ -6,6 +6,7 @@ title: 'Migrating Bluebird promises to native ones'
 cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562130606/bruce-jastrow-lp2eQ-8nhhE-unsplash_l7ydwp.jpg'
 tags: ['bluebirdjs', 'promises', 'javascript', 'code clean up']
 excerpt: 'Promises are now pretty solid in browsers, so we had to remove support library for promises'
+status: 'published'
 ---
 
 We have used bluebird because it was one of the best libraries for promises. But then promises have gained support in both nodejs and browser. That was the easy catch so we planned to remove it from our code base.

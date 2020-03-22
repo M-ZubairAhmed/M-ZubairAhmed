@@ -6,6 +6,7 @@ title: 'The Abominable Fetch'
 cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562130351/chelsea-bock-S-U6ipzt4Lw-unsplash_lgekpy.jpg'
 tags: ['FetchAPI', 'Axios', 'javascript', 'code clean up']
 excerpt: 'Trimming down long browser Fetch API functions with Context API'
+status: 'published'
 ---
 
 The first question i get is why use Fetch API instead of Axios library. Well there are many post online which do well to show the similarities and differences in both libraries. Well for us what worked will be discussed some other time.
