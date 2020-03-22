@@ -1,8 +1,8 @@
 ---
-path: '/blog/05-setting-up-webpack-for-react-project-doesn't-have-to-be-scary'
+path: '/blog/05-setting-up-webpack-for-react-project-doesnt-have-to-be-scary'
 date: '2019-5-08'
 serial: '5'
-title: 'Setting up webpack for react project doesn't have to be scary'
+title: 'Setting up webpack for react project doesnt have to be scary'
 cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v1562127221/toa-heftiba-ZWKNDOjwito-unsplash_lf5nub.jpg'
 tags:
   [

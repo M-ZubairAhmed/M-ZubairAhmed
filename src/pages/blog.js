@@ -33,17 +33,21 @@ export default (props) => {
           <Link to={blog.path} key={blog.path}>
             <div class="card mb-3">
               <div class="card-content">
-                <p class="title is-4">
-                  {blog.serial}. {blog.title}
-                </p>
+                <p class="title is-4">{blog.title}</p>
+                {blog.status === 'draft' ? (
+                  <p class="subtitle is-6">
+                    <i>Draft</i>
+                  </p>
+                ) : (
+                  <p class="subtitle is-6">
+                    {new Date(blog.date).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                  </p>
+                )}
                 <p class="subtitle is-6">
-                  {new Date(blog.date).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}
-                  <br />
-                  <br />
                   {blog.excerpt}...<strong>continue reading</strong>
                 </p>
               </div>
@@ -72,6 +76,7 @@ export const pageQuery = graphql`
             excerpt
             path
             serial
+            status
           }
         }
       }

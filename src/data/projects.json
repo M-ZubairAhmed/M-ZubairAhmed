@@ -1,5 +1,12 @@
 [
   {
+    "title": "Mattermost Plugin Netlify",
+    "description": "A two way integration plugin between Mattermost app and Netlify",
+    "tags": ["Golang"],
+    "sourceCode": "https://github.com/M-ZubairAhmed/mattermost-plugin-netlify",
+    "liveApp": ""
+  },
+  {
     "title": "Sardene",
     "description": "App ideas to hack your next personal project for coming weekend.",
     "tags": ["Golang", "Reactjs"],
