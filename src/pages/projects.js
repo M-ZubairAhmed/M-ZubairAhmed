@@ -5,51 +5,66 @@ import App from '../app'
 import { Jumbotron } from '../common/components'
 
 const ProjectCard = ({
-  id = '',
   title = '',
   description = '',
   tags = [],
   sourceCode = '',
   liveApp = '',
 }) => (
-  <div
-    key={id}
-    className="d-flex flex-md-row flex-column flex-nowrap justify-content-between p-3 mb-4 border border-secondary rounded rounded-lg">
-    <div className="order-0 align-self-stretch mr-3">
-      <h5 className="card-title text-decoration-none">{title}</h5>
-      <h6 className="card-subtitle mb-2 text-decoration-none color-2">
-        {description}
-      </h6>
-      <div className="pb-md-0 pb-3">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="badge badge-light font-weight-light font-italic mr-1">
-            {tag}
-          </span>
-        ))}
-      </div>
+  <div class="card mb-3">
+    <div class="card-content">
+      <h3 class="title is-4">{title}</h3>
+      <p class="subtitle is-6">{description}</p>
+      <p class="subtitle">
+        <div class="tags">
+          <nav
+            class="breadcrumb is-small has-bullet-separator"
+            aria-label="breadcrumbs">
+            <ul>
+              {tags.map((tag) => (
+                <>
+                  <li key={tag}>
+                    &nbsp;&nbsp;
+                    {tag}
+                    &nbsp;&nbsp;
+                  </li>
+                </>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </p>
     </div>
-    <div className="order-1 align-self-center d-flex flex-nowrap">
-      <a
-        href={sourceCode}
-        role="button"
-        className={`btn btn border border-secondary ${liveApp ? 'mr-3' : ''}`}
-        style={{ minWidth: '8rem' }}
-        target="__blank">
-        Source code
-      </a>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+          <a
+            href={sourceCode}
+            role="button"
+            className={`btn btn border border-secondary ${
+              liveApp ? 'mr-3' : ''
+            }`}
+            style={{ minWidth: '8rem' }}
+            target="__blank">
+            Source code
+          </a>
+        </span>
+      </p>
       {liveApp && (
-        <a
-          href={liveApp}
-          role="button"
-          className="btn btn border border-secondary "
-          style={{ minWidth: '8rem' }}
-          target="__blank">
-          Live app
-        </a>
+        <p class="card-footer-item">
+          <span>
+            <a
+              href={liveApp}
+              role="button"
+              className="btn btn border border-secondary "
+              style={{ minWidth: '8rem' }}
+              target="__blank">
+              Live app
+            </a>
+          </span>
+        </p>
       )}
-    </div>
+    </footer>
   </div>
 )
 
@@ -66,11 +81,11 @@ export default ({ location, data }) => {
         title="My Projects"
         description="Building small projects helps me in learning and understanding concepts."
       />
-      <section className="mb-5 px-3">
+      <div className="container">
         {projectsNode.map((project) => (
           <ProjectCard key={project.node.id} {...project.node} />
         ))}
-      </section>
+      </div>
     </App>
   )
 }

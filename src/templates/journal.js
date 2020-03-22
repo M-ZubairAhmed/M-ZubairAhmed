@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import App from '../app'
-import { BlogFooter, BlogHeader } from '../common/components'
 
 export default ({ data, location }) => {
   const {
@@ -35,18 +34,26 @@ export default ({ data, location }) => {
       meta={blogTags}
       coverPhoto={blogCoverImage}
       path={blogPath}>
-      <BlogHeader
-        title={blogTitle}
-        description={blogDate}
-        timeToRead={timeToRead}
-        className="pb-1 px-1"
-      />
-      <article
-        className="blogger px-1"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-      <hr className="blogger-hr mb-5" />
-      <BlogFooter />
+      <header class="hero is-medium">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title">{blogTitle}</h1>
+            <h2 class="subtitle">{blogDate}</h2>
+            <h2 class="subtitle">
+              {parseInt(timeToRead, 10) === 1
+                ? `${timeToRead} min read`
+                : `${timeToRead} mins read`}{' '}
+            </h2>
+          </div>
+        </div>
+      </header>
+      <div className="container">
+        <article
+          className="blogger px-1"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <hr className="blogger-hr mb-5" />
+      </div>
     </App>
   )
 }

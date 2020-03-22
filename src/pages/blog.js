@@ -1,8 +1,8 @@
 import React from 'react'
 import App from '../app'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-import { BlogCard, Jumbotron } from '../common/components'
+import { Jumbotron } from '../common/components'
 
 export default (props) => {
   const {
@@ -17,9 +17,7 @@ export default (props) => {
     } = edge
 
     return frontmatter
-  }).sort(
-    (blogA, blogB) => parseInt(blogA.serial, 10) < parseInt(blogB.serial, 10),
-  )
+  }).sort((blogA, blogB) => Number(blogB.serial) - Number(blogA.serial))
 
   return (
     <App
@@ -30,16 +28,29 @@ export default (props) => {
         title="My Blogposts"
         description="Writing small blog posts, so i can share what i have experience and learned"
       />
-      <section className="mb-5 px-3">
+      <div className="container">
         {blogs.map((blog) => (
-          <BlogCard
-            key={blog.path}
-            title={blog.title}
-            excerpt={blog.excerpt}
-            link={blog.path}
-          />
+          <Link to={blog.path} key={blog.path}>
+            <div class="card mb-3">
+              <div class="card-content">
+                <p class="title is-4">
+                  {blog.serial}. {blog.title}
+                </p>
+                <p class="subtitle is-6">
+                  {new Date(blog.date).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                  <br />
+                  <br />
+                  {blog.excerpt}...<strong>continue reading</strong>
+                </p>
+              </div>
+            </div>
+          </Link>
         ))}
-      </section>
+      </div>
     </App>
   )
 }

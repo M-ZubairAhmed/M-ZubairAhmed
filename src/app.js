@@ -2,7 +2,7 @@ import React from 'react'
 
 import ThemeContext from './context/ThemeContext'
 import SEO from './common/seo'
-import Navbar from './common/navbar'
+import { Navbar } from './common/components'
 
 const mainSiteTags = [
   `Software developer`,
@@ -31,7 +31,7 @@ export default (props) => {
               lang="en"
             />
             <Navbar location={props.location} />
-            <div className="px-3 py-5">{props.children}</div>
+            <section className="section">{props.children}</section>
           </main>
         </div>
       )}

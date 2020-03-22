@@ -1,23 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
+
 import App from '../app'
 
 export default () => (
   <App>
-    <div
-      className=" container-fluid d-flex flex-column justify-content-center align-items-center text-center"
-      style={{ minHeight: '80vh' }}>
-      <h1 className="display-4">Hey, i think you landed on a wrong page</h1>
-      <Link to="/blog" className="nav-link text-secondary">
-        <button type="button" className="btn btn-dark btn-lg btn-block">
-          Redirect to my blog
-        </button>
-      </Link>
-      <Link to="/" className="nav-link text-secondary">
-        <button type="button" className="btn btn-dark btn-lg btn-block">
-          Go to home
-        </button>
-      </Link>
-    </div>
+    <section class="hero is-medium has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Hey, i think you landed on a wrong page,
+            <br />
+            This page doesn't exists.
+          </h1>
+          <Link to="/">
+            <button type="button" className="button">
+              Go to home
+            </button>
+          </Link>
+        </div>
+      </div>
+    </section>
   </App>
 )
