@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bulma": "^0.8.0",
-    "gatsby": "^2.20.2",
+    "gatsby": "^2.20.3",
     "gatsby-plugin-layout": "^1.2.0",
     "gatsby-plugin-manifest": "^2.3.1",
     "gatsby-plugin-offline": "^3.1.0",
@@ -24,6 +24,7 @@
     "gatsby-remark-prismjs": "^3.4.0",
     "gatsby-remark-smartypants": "^2.2.0",
     "gatsby-source-filesystem": "^2.2.1",
+    "gatsby-theme-mdx-deck": "^4.1.0",
     "gatsby-transformer-json": "^2.3.0",
     "gatsby-transformer-remark": "^2.7.0",
     "gatsby-transformer-sharp": "^2.4.1",
@@ -31,7 +32,8 @@
     "prismjs": "^1.19.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-syntax-highlighter": "^12.2.1"
   },
   "devDependencies": {
     "eslint-utils": "^2.0.0",

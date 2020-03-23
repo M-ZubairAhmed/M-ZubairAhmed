@@ -71,6 +71,14 @@ module.exports = {
         path: `${__dirname}/src/data/posts`,
       },
     },
+    {
+      resolve: 'gatsby-theme-mdx-deck',
+      options: {
+        mdx: true,
+        contentPath: `${__dirname}/src/data/slides/`,
+        basePath: '/slides',
+      },
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
