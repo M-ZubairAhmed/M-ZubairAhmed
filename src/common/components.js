@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
-import ThemeContext from '../context/ThemeContext'
+import ThemeContext from './themeContext'
 
 export const Jumbotron = (props) => (
   <header class="hero">
@@ -32,13 +32,18 @@ export const Navbar = ({ location }) => {
               {basePage === '' ? <u>M-ZubairAhmed</u> : <>M-ZubairAhmed</>}
             </Link>
             <a
+              href="/"
               role="button"
               className={`navbar-burger burger ${
                 isBurgerMenuOpen ? 'is-active' : ''
               }`}
               aria-label="menu"
               aria-expanded="false"
-              onClick={() => toggleBurgerMenu(!isBurgerMenuOpen)}>
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                toggleBurgerMenu(!isBurgerMenuOpen)
+              }}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>

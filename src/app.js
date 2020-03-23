@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ThemeContext from './context/ThemeContext'
+import ThemeContext from './common/themeContext'
 import SEO from './common/seo'
 import { Navbar } from './common/components'
 

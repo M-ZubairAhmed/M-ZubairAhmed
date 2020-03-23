@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from './src/context/ThemeContext'
+import { ThemeProvider } from './src/common/themeContext'
 
 import './src/styles/index.scss'
 import 'prismjs/themes/prism-tomorrow.css'
