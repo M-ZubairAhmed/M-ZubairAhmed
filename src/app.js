@@ -31,7 +31,7 @@ export default (props) => {
               lang="en"
             />
             <Navbar location={props.location} />
-            <section className="section">{props.children}</section>
+            <div className="section">{props.children}</div>
           </main>
         </div>
       )}

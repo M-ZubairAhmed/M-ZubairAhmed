@@ -47,13 +47,13 @@ export default ({ data, location }) => {
           </div>
         </div>
       </header>
-      <div className="container">
+      <section className="container">
         <article
           className="blogger px-1"
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <hr className="blogger-hr mb-5" />
-      </div>
+      </section>
     </App>
   )
 }

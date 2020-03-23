@@ -2,7 +2,31 @@ import React from 'react'
 import App from '../app'
 import { graphql, Link } from 'gatsby'
 
-import { Jumbotron } from '../common/components'
+import { Jumbotron, formatDate } from '../common/components'
+
+const BlogCard = ({
+  path = '/',
+  title = '',
+  status = 'draft',
+  date = '',
+  excerpt = '',
+}) => (
+  <Link to={path}>
+    <div className="card mb-3">
+      <div className="card-content">
+        <h3 className="title is-4">{title}</h3>
+        <div className="content">
+          <p>
+            <b>{status === 'draft' ? 'Draft' : formatDate(date)}</b>
+          </p>
+          <p>
+            {excerpt}...<strong>continue reading</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </Link>
+)
 
 export default (props) => {
   const {
@@ -28,33 +52,11 @@ export default (props) => {
         title="My Blogposts"
         description="Writing small blog posts, so i can share what i have experience and learned"
       />
-      <div className="container">
+      <section className="container">
         {blogs.map((blog) => (
-          <Link to={blog.path} key={blog.path}>
-            <div class="card mb-3">
-              <div class="card-content">
-                <p class="title is-4">{blog.title}</p>
-                {blog.status === 'draft' ? (
-                  <p class="subtitle is-6">
-                    <i>Draft</i>
-                  </p>
-                ) : (
-                  <p class="subtitle is-6">
-                    {new Date(blog.date).toLocaleDateString('en-US', {
-                      month: 'long',
-                      day: 'numeric',
-                      year: 'numeric',
-                    })}
-                  </p>
-                )}
-                <p class="subtitle is-6">
-                  {blog.excerpt}...<strong>continue reading</strong>
-                </p>
-              </div>
-            </div>
-          </Link>
+          <BlogCard key={blog.path} {...blog} />
         ))}
-      </div>
+      </section>
     </App>
   )
 }

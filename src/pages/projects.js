@@ -14,57 +14,31 @@ const ProjectCard = ({
   <div class="card mb-3">
     <div class="card-content">
       <h3 class="title is-4">{title}</h3>
-      <p class="subtitle is-6">{description}</p>
-      <p class="subtitle">
-        <div class="tags">
-          <nav
-            class="breadcrumb is-small has-bullet-separator"
-            aria-label="breadcrumbs">
-            <ul>
-              {tags.map((tag) => (
-                <>
-                  <li key={tag}>
-                    &nbsp;&nbsp;
-                    {tag}
-                    &nbsp;&nbsp;
-                  </li>
-                </>
-              ))}
-            </ul>
-          </nav>
+      <div class="content">
+        <p>{description}</p>
+        <div class="breadcrumb is-small has-bullet-separator">
+          <ul>
+            {tags.map((tag) => (
+              <li key={tag}>
+                &nbsp;&nbsp;
+                {tag}
+                &nbsp;&nbsp;
+              </li>
+            ))}
+          </ul>
         </div>
-      </p>
+      </div>
     </div>
-    <footer class="card-footer">
-      <p class="card-footer-item">
-        <span>
-          <a
-            href={sourceCode}
-            role="button"
-            className={`btn btn border border-secondary ${
-              liveApp ? 'mr-3' : ''
-            }`}
-            style={{ minWidth: '8rem' }}
-            target="__blank">
-            Source code
-          </a>
-        </span>
-      </p>
+    <div class="card-footer">
+      <a href={sourceCode} className="card-footer-item" target="__blank">
+        Source code
+      </a>
       {liveApp && (
-        <p class="card-footer-item">
-          <span>
-            <a
-              href={liveApp}
-              role="button"
-              className="btn btn border border-secondary "
-              style={{ minWidth: '8rem' }}
-              target="__blank">
-              Live app
-            </a>
-          </span>
-        </p>
+        <a href={liveApp} className="card-footer-item" target="__blank">
+          Live app
+        </a>
       )}
-    </footer>
+    </div>
   </div>
 )
 
@@ -81,11 +55,11 @@ export default ({ location, data }) => {
         title="My Projects"
         description="Building small projects helps me in learning and understanding concepts."
       />
-      <div className="container">
+      <section className="container">
         {projectsNode.map((project) => (
           <ProjectCard key={project.node.id} {...project.node} />
         ))}
-      </div>
+      </section>
     </App>
   )
 }

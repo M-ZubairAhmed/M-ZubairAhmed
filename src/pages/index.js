@@ -14,7 +14,7 @@ export default ({ location, data }) => {
       title="Software Engineer"
       description="Personal website for M Zubair Ahmed"
       location={location}>
-      <div class="hero has-text-centered">
+      <section class="hero has-text-centered">
         <div class="hero-body">
           <h1 class="title is-1">Hi, I am M. Zubair Ahmed</h1>
           <h2 class="subtitle is-1">
@@ -51,7 +51,7 @@ export default ({ location, data }) => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </App>
   )
 }
