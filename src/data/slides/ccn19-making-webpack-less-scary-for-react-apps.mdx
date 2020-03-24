@@ -1,5 +1,12 @@
-import {Prism} from 'react-syntax-highlighter'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow as darkSyntaxColor} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Link } from 'gatsby'
+
 import myTheme from '../../styles/slideTheme.js'
+
+import webpackOverviewImg from "../../../static/images/webpack-overview.png";
+import depHierarchyImg from "../../../static/images/dep-hierarchy.png";
+
 
 export const theme = myTheme
 
@@ -8,6 +15,211 @@ export const theme = myTheme
 
 <br/>
 
-## M-ZubairAhmed
+### Mohammed Zubair Ahmed
+### @Md_ZubairAhmed
 
 ---
+
+<img src={webpackOverviewImg} alt="Overview of webpack" width="60%"/>
+
+<br/>
+
+### It is a static module bundler for modern JavaScript applications.
+
+---
+
+## Lets try to understand why use Webpack?
+
+---
+
+<SyntaxHighlighter language="html" style={darkSyntaxColor}>
+    {`<html>
+<head>
+    <script src="src/even.js"></script>
+    <script src="src/odd.js"></script>
+    <script src="src/index.js"></script>
+</head>
+<body>
+<!-- 	Required input button, etc   -->
+</body>
+</html>`}
+    </SyntaxHighlighter>
+<p>index.html</p>
+
+---
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`var isTenEven = isEven(10);
+var isTenOdd = isOdd(10);
+console.log("Is 10 even : " + isTenEven);
+console.log("Is 10 odd : " + isTenOdd);`}
+    </SyntaxHighlighter>
+<p>index.js</p>
+
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`var isOdd = function(num){
+ return !isEven(num);
+}`}
+    </SyntaxHighlighter>
+<p>odd.js</p>
+
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`var isEven = function(num){
+ return num % 2 == 0;
+}`}
+    </SyntaxHighlighter>
+<p>even.js</p>
+
+---
+
+<img src={depHierarchyImg} alt="Dependency hierarchy" width="80%"/>
+
+# Dependency hierarchy !!
+
+---
+
+<SyntaxHighlighter language="html" style={darkSyntaxColor}>
+    {`<html>
+<head>
+    <!-- <script src="src/even.js"></script> -->
+    <!-- <script src="src/odd.js"></script> -->
+    <!-- <script src="src/index.js"></script> -->
+    <script src="./dist/bundle.js"></script>
+</head>
+<body>
+<!-- 	Required input button, etc   -->
+</body>
+</html>`}
+    </SyntaxHighlighter>
+<p>new-index.html</p>
+
+---
+
+## Basics terminology
+
+---
+
+#### "Entry" 
+An entry point indicates which module webpack should use to begin building out its internal dependency graph.
+
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`module.exports = {
+ entry :  'path/to/file'
+}`}
+    </SyntaxHighlighter>
+
+
+---
+
+#### "Output"
+The output property tells webpack where to emit the bundles it creates and how to name these files.
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`module.exports = {
+ entry :  'path/to/file',
+ output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.bundle.js'
+  }
+}`}
+    </SyntaxHighlighter>
+
+---
+
+#### "Loaders"
+Loaders allow webpack to process other types of files and convert them into valid modules that can be
+
+consumed by your application and added to the dependency graph.
+
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`module.exports = {
+ entry :  'path/to/file',
+ output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.bundle.js'
+  },
+ rules: [
+    { test: /\.css$/, use: 'css-loader' },
+    { test: /\.ts$/, use: 'ts-loader' }
+  ]
+}`}
+    </SyntaxHighlighter>
+
+---
+
+#### "Plugins"
+They leverage to perform a wider range of tasks like bundle optimization, 
+
+asset management and injection of environment variables.
+
+<br/>
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+ entry :  'path/to/file',
+ output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.bundle.js'
+  },
+ rules: [
+    { test: /\.css$/, use: 'css-loader' },
+    { test: /\.ts$/, use: 'ts-loader' }
+  ],
+ plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'})
+  ]
+}`}
+    </SyntaxHighlighter>
+
+---
+
+#### "Mode"
+By setting the mode parameter to either development, production or none, 
+
+you can enable webpack's built-in optimizations that correspond to each environment
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+ entry :  'path/to/file',
+ output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.bundle.js'
+  },
+ rules: [
+    { test: /\.css$/, use: 'css-loader' },
+    { test: /\.ts$/, use: 'ts-loader' }
+  ],
+ plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'})
+  ],
+ mode: 'production'
+}`}
+    </SyntaxHighlighter>
+
+---
+
+## Lets write try to setup a simple React app 
+
+## with Webpack
+
+---
+
+<Link to="/talks">
+    <h1>
+        &#x2715;
+    </h1>
+</Link>
+<h6>
+    EOT : End of Tape
+</h6>
