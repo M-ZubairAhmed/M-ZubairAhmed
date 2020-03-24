@@ -1,13 +1,305 @@
-import {Prism} from 'react-syntax-highlighter'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow as darkSyntaxColor} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Link } from 'gatsby'
+
 import myTheme from '../../styles/slideTheme.js'
+
+import cyclingSmoothGif from "../../../static/gifs/cycling-smooth.gif";
+import cyclingTricksGif from "../../../static/gifs/cycling-tricks.gif";
+import measuringByHandGif from "../../../static/gifs/measuring-by-hand.gif";
+import umbrellaFailGif from "../../../static/gifs/umbrella-fail.gif";
+import autoDoorsGif from "../../../static/gifs/auto-doors.gif";
+import modalSolarGif from "../../../static/gifs/modal-solar.gif";
+
+import eslintLogo from "../../../static/images/eslint-logo.png";
+import tsLogo from "../../../static/images/typescript-logo.png";
+import flowLogo from "../../../static/images/flow-logo.png";
+import testingTrophyImg from "../../../static/images/testing-trophy.jpg";
+import vueCli1Img from "../../../static/images/vue-cli-1.png";
+import vueCli2Img from "../../../static/images/vue-cli-2.png";
+import vueCli3Img from "../../../static/images/vue-cli-3.png";
 
 export const theme = myTheme
 
 
-# Modern ways of End to End testing with Cypress
+<h1 class="has-text-centered">Modern ways of End to End testing with Cypress</h1>
 
 <br/>
 
-## M-ZubairAhmed
+### Mohammed Zubair Ahmed
+### @Md_ZubairAhmed
+---
+
+# What to expect today
+
+<br/>
+
+<ul>
+    <li>
+        <h3>- Understanding Why test at all?</h3>
+    </li>
+    <li>
+        <h3>- Overview of Different types of tests</h3>
+    </li>
+    <li>
+        <h3>- Deep dive into e2e tests</h3>
+    </li>
+    <li>
+        <h3>- Getting familiar with Cypress.io</h3>
+    </li>
+    <li>
+        <h3>- E2E Testing of an app (hands on)</h3>
+    </li>
+</ul>
 
 ---
+
+# Why test at all?
+
+<br/>
+
+<ul>
+    <li>
+        <h3>- Our app can work for our user</h3>
+    </li>
+    <li>
+        <h3>- Enhance development workflow</h3>
+    </li>
+</ul>
+
+---
+
+# How we think users will use the app
+
+<br/>
+
+<img src={cyclingSmoothGif} alt="Gif of user riding cycle comfortably" width="30%"/>
+
+[via christowski on GIPHY](https://media.giphy.com/media/hV0eKC2OpA0F1Ougjs/source.gif)
+
+---
+
+# How users actually uses the app
+
+<br/>
+
+<img src={cyclingTricksGif} alt="Gif of user doing tricks on cycle" width="40%"/>
+
+[via GIPHY](https://media.giphy.com/media/YuLVCLQPsKAFi/giphy.gif)
+
+---
+
+# Static tests
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`const add = (number1, number2) => {
+return number1 + number2
+}
+const padding = 10
+const border = add(padding, width)
+// Width is not defined`}
+    </SyntaxHighlighter>
+
+<br/>
+<br/>
+
+<div>
+<img src={eslintLogo} style={{marginRight:"5rem"}} alt="Eslint"/>
+<img src={tsLogo} style={{marginRight:"5rem"}} alt="Typescript"/>
+<img src={flowLogo} alt="Flow Js"/>
+</div>
+
+---
+
+# Static testing
+
+<br/>
+
+<img src={measuringByHandGif} alt="static testing"/>
+
+[via GIPHY](https://gph.is/2h08OFE)
+
+---
+
+# Unit tests
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`import {add} from "./add.js";
+test("Adding One and One should be Two all the time", () => {
+  let width = 1;
+  let padding = 1;
+  expect(add(width, padding)).toEqual(2);
+});`}
+    </SyntaxHighlighter>
+
+---
+
+# Unit testing
+
+<br/>
+
+<img src={umbrellaFailGif} alt="static testing"/>
+
+[via GIPHY](https://gph.is/1ax36Ex)
+
+---
+
+# Integration tests
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`test('login as an existing user', async () => {
+// wait for the app to finish loading the mocked requests
+  await finishLoading()
+  // navigate to login
+  // fill out form
+  // submit form
+  // wait for the mocked requests to finish
+  await finishLoading()
+  // assert calls
+  expect(axiosMock.__mock.instance.post).toHaveBeenCalledWith(
+    '/auth/login', fakeUser)
+  // assert the state of the world
+  expect(window.location.href).not.toContain('login')
+  expect(getByTestId('username-display').textContent).toEqual(fakeUser.username)
+})
+`}
+    </SyntaxHighlighter>
+
+---
+
+# Integration testing
+
+<br/>
+
+<img src={autoDoorsGif} alt="static testing" width="30%"/>
+
+[via GIPHY](https://gph.is/2lDDMaj)
+
+---
+
+# End to End tests
+
+<SyntaxHighlighter language="javascript" style={darkSyntaxColor}>
+    {`describe('todo app', () => {
+    it('should add a todo item to app', () => {
+        cy.visitApp()
+        .getByText(/register/i)
+        .click()
+        .getByLabelText(/username)
+        .type(user.username)
+        .getByLabelText(/password)
+        .type(user.password)
+        .getByText(/login/i)
+        .click()
+        .getByLabelText(/add todo/i)
+        .type('{enter}')
+        .should('have.class', 'complete')
+    })
+})`}
+    </SyntaxHighlighter>
+
+---
+
+# End to End testing
+
+<br/>
+
+<img src={modalSolarGif} alt="static testing" width="40%"/>
+
+[via GIPHY](https://gph.is/QEliDs)
+
+---
+
+
+#### <i>"The more your tests resemble the way your software is used, the more confidence they can give you."</i>
+
+- Kent C. Dodds (@kentcdodds) March 23, 2018
+
+---
+
+# Testing trophy
+
+<br/>
+
+<img src={testingTrophyImg} alt="static testing" width="35%"/>
+
+[Testing javascript by Kent C. Dodds](https://testingjavascript.com/)
+
+
+---
+
+### Setting up Cypress with Vue cli
+
+<SyntaxHighlighter language="bash" style={darkSyntaxColor}>
+    {`vue create project-name`}
+</SyntaxHighlighter>
+
+---
+
+### Setting up Cypress with Vue cli
+
+<SyntaxHighlighter language="bash" style={darkSyntaxColor}>
+    {`vue create project-name`}
+</SyntaxHighlighter>
+
+## &#10552;
+
+<img src={vueCli1Img} alt="vue cli step 2" width="12%"/>
+
+---
+
+### Setting up Cypress with Vue cli
+
+<SyntaxHighlighter language="bash" style={darkSyntaxColor}>
+    {`vue create project-name`}
+</SyntaxHighlighter>
+
+## &#10552;
+
+<img src={vueCli1Img} alt="vue cli step 2" width="12%"/>
+
+## &#10553;
+
+<img src={vueCli2Img} alt="vue cli step 3" width="18%"/>
+
+---
+
+### Setting up Cypress with Vue cli
+
+<SyntaxHighlighter language="bash" style={darkSyntaxColor}>
+    {`vue create project-name`}
+</SyntaxHighlighter>
+
+## &#10552;
+
+<img src={vueCli1Img} alt="vue cli step 2" width="12%"/>
+
+## &#10553;
+
+<img src={vueCli2Img} alt="vue cli step 3" width="18%"/>
+
+## &#10552;
+
+<img src={vueCli3Img} alt="vue cli step 4" width="28%"/>
+
+---
+
+# Lets write some end to end tests
+
+<br/>
+
+> Head over to
+
+atomurl.ga/go/cypress
+
+or
+
+https://github.com/M-ZubairAhmed/e2e-testing-with-cypress
+
+---
+
+<Link to="/talks">
+    <h1>
+        &#x2715;
+    </h1>
+</Link>

@@ -1,89 +1,151 @@
 export default {
-  breakpoints: ['40em', '52em', '64em'],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  colors: {
+    text: 'hsl(210, 50%, 96%)',
+    background: 'hsl(230, 25%, 18%)',
+    primary: 'hsl(260, 100%, 80%)',
+    secondary: 'hsl(290, 100%, 80%)',
+    highlight: 'hsl(260, 20%, 40%)',
+    purple: 'hsl(290, 100%, 80%)',
+    muted: 'hsla(230, 20%, 0%, 20%)',
+    gray: 'hsl(210, 50%, 60%)',
+  },
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [8, 10, 12, 14, 16, 20, 24, 32, 48, 64, 72],
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 700,
+    display: 900,
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
-  colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#30c',
-    muted: '#f6f6f6',
-  },
-  text: {
+  textStyles: {
     heading: {
       fontFamily: 'heading',
-      lineHeight: 'heading',
       fontWeight: 'heading',
+      lineHeight: 'heading',
+    },
+    display: {
+      variant: 'textStyles.heading',
+      fontWeight: 'display',
+      letterSpacing: '-0.03em',
+      mt: 3,
     },
   },
   styles: {
+    Container: {
+      p: 3,
+      maxWidth: 1024,
+    },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
     },
     h1: {
-      variant: 'text.heading',
-      fontSize: 5,
+      variant: 'textStyles.display',
+      fontSize: 9,
     },
     h2: {
-      variant: 'text.heading',
-      fontSize: 4,
+      variant: 'textStyles.heading',
+      fontSize: 8,
     },
     h3: {
-      variant: 'text.heading',
-      fontSize: 3,
+      variant: 'textStyles.heading',
+      fontSize: 7,
     },
     h4: {
-      variant: 'text.heading',
-      fontSize: 2,
+      variant: 'textStyles.heading',
+      fontSize: 6,
     },
     h5: {
-      variant: 'text.heading',
-      fontSize: 1,
+      variant: 'textStyles.heading',
+      fontSize: 5,
     },
     h6: {
-      variant: 'text.heading',
-      fontSize: 0,
+      variant: 'textStyles.heading',
+      fontSize: 4,
+    },
+    a: {
+      color: 'primary',
+      '&:hover': {
+        color: 'secondary',
+      },
     },
     pre: {
+      variant: 'prism',
       fontFamily: 'monospace',
-      overflowX: 'auto',
+      fontSize: 1,
+      p: 1,
+      color: 'text',
+      bg: 'muted',
+      overflow: 'auto',
       code: {
         color: 'inherit',
       },
     },
     code: {
       fontFamily: 'monospace',
-      fontSize: 'inherit',
+      color: 'secondary',
+      fontSize: 1,
+    },
+    inlineCode: {
+      fontFamily: 'monospace',
+      color: 'secondary',
+      bg: 'muted',
     },
     table: {
       width: '100%',
+      my: 4,
       borderCollapse: 'separate',
       borderSpacing: 0,
+      'th,td': {
+        textAlign: 'left',
+        py: '4px',
+        pr: '4px',
+        pl: 0,
+        borderColor: 'muted',
+        borderBottomStyle: 'solid',
+      },
     },
     th: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
+      verticalAlign: 'bottom',
+      borderBottomWidth: '2px',
     },
     td: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
+      verticalAlign: 'top',
+      borderBottomWidth: '1px',
+    },
+    hr: {
+      border: 0,
+      borderBottom: '1px solid',
+      borderColor: 'muted',
+    },
+    img: {
+      maxWidth: '100%',
+    },
+  },
+  prism: {
+    '.comment,.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url': {
+      color: 'gray',
+    },
+    '.comment': {
+      fontStyle: 'italic',
+    },
+    '.property,.tag,.boolean,.number,.constant,.symbol,.deleted,.function,.class-name,.regex,.important,.variable': {
+      color: 'purple',
+    },
+    '.atrule,.attr-value,.keyword': {
+      color: 'primary',
+    },
+    '.selector,.attr-name,.string,.char,.bultin,.inserted': {
+      color: 'secondary',
     },
   },
 }
