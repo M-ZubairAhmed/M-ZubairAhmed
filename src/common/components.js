@@ -96,3 +96,12 @@ export const formatDate = (date = '1990-1-1') =>
     day: 'numeric',
     year: 'numeric',
   })
+
+export const EOT = () => (
+  <>
+    <Link to="/talks">
+      <h1 className="title is-size-1 has-text-warning">&#x2715;</h1>
+    </Link>
+    <h6>EOT : End of Tape</h6>
+  </>
+)

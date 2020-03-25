@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow as darkSyntaxColor} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Link } from 'gatsby'
 
+import { EOT } from "../../common/components"
 import myTheme from '../../styles/slideTheme.js'
 
 import cyclingSmoothGif from "../../../static/gifs/cycling-smooth.gif";
@@ -298,11 +299,4 @@ https://github.com/M-ZubairAhmed/e2e-testing-with-cypress
 
 ---
 
-<Link to="/talks">
-    <h1>
-        &#x2715;
-    </h1>
-</Link>
-<h6>
-    EOT : End of Tape
-</h6>
+<EOT/>
