@@ -3,6 +3,7 @@ module.exports = {
     title: `M-ZubairAhmed`,
     description: `Zubair's space on the web`,
     url: 'https://mzubairahmed.com',
+    siteUrl: `https://mzubairahmed.com`,
     twitterUsername: '@Md_ZubairAhmed',
     author: `M-ZubairAhmed`,
   },
@@ -87,6 +88,13 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/data/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -100,6 +108,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-offline',
   ],
 }
