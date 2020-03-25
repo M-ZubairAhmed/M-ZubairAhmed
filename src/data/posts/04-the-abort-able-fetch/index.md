@@ -7,6 +7,8 @@ cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,w_400/v15
 tags: ['FetchAPI', 'Abortcontroller', 'javascript', 'code clean up']
 excerpt: 'How to efficiently handle dangling network requests in web app.'
 status: 'published'
+comments: 'https://twitter.com/Md_ZubairAhmed/status/1104854923051642880'
+corrections: 'https://github.com/M-ZubairAhmed/mzubairahmed.com/blob/master/src/data/posts/04-the-abort-able-fetch/index.md'
 ---
 
 Fetch API have come a long way into becoming a more mature, stable and supportive Web API. We use it extensively in our app. However we weren’t using its abort-able functionality i.e to stop or terminate requests in mid way. Support for abort able fetch was proposed in 2̶0̶1̶5̶ forever ago. Then in 2017 it finally was included in the standard and Edge was first to support it. Now it [mostly supported](https://caniuse.com/#feat=abortcontroller) amongst browsers.

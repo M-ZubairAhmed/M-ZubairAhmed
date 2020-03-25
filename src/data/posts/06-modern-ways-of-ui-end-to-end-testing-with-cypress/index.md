@@ -17,6 +17,8 @@ tags:
   ]
 excerpt: 'A look at how to get up and running with Cypress JS : a complete end to end testing tool that can help you sleep better at friday night knowing you deployed your app to production earlier that day'
 status: 'draft'
+comments: ''
+corrections: ''
 ---
 
 ## Why write tests at all?

@@ -17,6 +17,8 @@ tags:
   ]
 excerpt: 'Lets setup webpack for starting a react app from scratch using as little as configuration possible. We will setup webpack, babel,prettier and styling for our tiny app.'
 status: 'published'
+comments: 'https://twitter.com/Md_ZubairAhmed/status/1127744582182027265'
+corrections: 'https://github.com/M-ZubairAhmed/mzubairahmed.com/blob/master/src/data/posts/05-setting-up-webpack-for-react-project-doesnt-have-to-be-scary/index.md'
 ---
 
 If you would have asked me few days weeks ago, to setup a complete build and boiler system for new react project, i would have handed you a [C.R.A](https://github.com/facebook/create-react-app).

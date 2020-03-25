@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import App from '../app'
+import { Emoji } from '../common/components'
 
 export default ({ data, location }) => {
   const {
@@ -9,12 +10,14 @@ export default ({ data, location }) => {
       timeToRead,
       html,
       frontmatter: {
-        title: blogTitle,
+        title,
         date,
-        excerpt: blogDescription,
-        tags: blogTags,
-        cover: blogCoverImage,
-        path: blogPath,
+        excerpt,
+        tags,
+        cover,
+        path,
+        corrections,
+        comments,
       },
     },
   } = data
@@ -27,17 +30,17 @@ export default ({ data, location }) => {
 
   return (
     <App
-      title={blogTitle}
-      description={blogDescription}
-      image={blogCoverImage}
+      title={title}
+      description={excerpt}
+      image={cover}
       location={location}
-      meta={blogTags}
-      coverPhoto={blogCoverImage}
-      path={blogPath}>
+      meta={tags}
+      coverPhoto={cover}
+      path={path}>
       <header class="hero is-medium">
         <div class="hero-body">
           <div class="container has-text-centered">
-            <h1 class="title">{blogTitle}</h1>
+            <h1 class="title">{title}</h1>
             <h2 class="subtitle">{blogDate}</h2>
             <h2 class="subtitle">
               {parseInt(timeToRead, 10) === 1
@@ -49,11 +52,44 @@ export default ({ data, location }) => {
       </header>
       <section className="container">
         <article
-          className="blogger px-1"
+          className="blogger"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <hr className="blogger-hr mb-5" />
+        <hr className="blogger-hr" />
       </section>
+      <footer style={{ textAlign: 'center' }}>
+        <h3 className="title is-5 has-text-weight-normal mb-3">
+          <Emoji symbol="💞" className="title is-2" />
+          Thank you so much for reading. If you are interested{' '}
+          <Link to="/blog" className="is-italic has-text-weight-medium">
+            here are
+          </Link>{' '}
+          my other blog posts.
+        </h3>
+        {comments && (
+          <a
+            href={comments}
+            target={'_blank'}
+            className="subtitle is-6 has-text-weight-thin">
+            Comment on Twitter
+          </a>
+        )}
+        {corrections && (
+          <a
+            href={corrections}
+            target={'_blank'}
+            className="subtitle is-6 has-text-weight-thin">
+            {' '}
+            - Edit on Github -{' '}
+          </a>
+        )}
+        <a
+          href={'https://github.com/M-ZubairAhmed/mzubairahmed.com/issues/new'}
+          target={'_blank'}
+          className="subtitle is-6 has-text-weight-thin">
+          Report an issue
+        </a>
+      </footer>
     </App>
   )
 }
@@ -77,6 +113,8 @@ export const pageQuery = graphql`
         excerpt
         cover
         path
+        comments
+        corrections
       }
     }
   }

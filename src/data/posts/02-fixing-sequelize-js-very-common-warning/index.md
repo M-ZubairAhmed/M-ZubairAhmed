@@ -7,6 +7,8 @@ cover: 'https://res.cloudinary.com/md-zubairahmed/image/upload/c_scale,g_auto,x_
 tags: ['squelizejs', 'javascript', 'code clean up']
 excerpt: 'We had this constant squelize error showing up in our development logs stating String based operators are now deprecated. It was time to fix this.'
 status: 'published'
+comments: ''
+corrections: 'https://github.com/M-ZubairAhmed/mzubairahmed.com/blob/master/src/data/posts/02-fixing-sequelize-js-very-common-warning/index.md'
 ---
 
 We had this constant error showing up in our development logs :

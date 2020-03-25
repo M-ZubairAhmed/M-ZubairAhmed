@@ -84,8 +84,8 @@ export const Navbar = ({ location }) => {
   )
 }
 
-export const Emoji = ({ symbol }) => (
-  <span className="emoji" role="img" aria-label="" aria-hidden="true">
+export const Emoji = ({ symbol, ...rest }) => (
+  <span role="img" aria-label="" aria-hidden="true" {...rest}>
     {symbol}
   </span>
 )
