@@ -18,16 +18,16 @@ export default ({ location, data }) => {
         <div class="hero-body">
           <h1 class="title is-1">Hi, I am M. Zubair Ahmed</h1>
           <h2 class="subtitle is-1">
-            <Emoji symbol="🤹🏼‍♂️"></Emoji> Software Engineer
+            <Emoji symbol="🤹🏽‍♂️"></Emoji> Software Engineer
           </h2>
           <hr />
           <p className="subtitle is-4">
-            I am working on <Emoji symbol="👨🏽‍💻"></Emoji>frontend web development
+            I am working on <Emoji symbol="💻"></Emoji>frontend web development
             with Javascript and <Emoji symbol="📚"></Emoji>learning backend web
             development with GoLang. I love contributing to{' '}
             <Emoji symbol="🌟"></Emoji> open source.
             <br />
-            <Emoji symbol="👨‍👩‍👧‍👧"></Emoji> Family is above everything else for me.
+            <Emoji symbol="💗"></Emoji> Family is above everything else for me.
             My hobbies include <Emoji symbol="🚲"></Emoji>cycling,{' '}
             <Emoji symbol="🔨"> </Emoji>wood working,{' '}
             <Emoji symbol="🏏"></Emoji>
