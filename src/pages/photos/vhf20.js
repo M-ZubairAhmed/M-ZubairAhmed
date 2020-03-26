@@ -21,7 +21,7 @@ export default ({ location, data }) => {
       />
       <section className="container">
         {photosNode.map(({ fluid }) => (
-          <div class="mb-3">
+          <div className="mb-3">
             <Img fluid={fluid} />
           </div>
         ))}

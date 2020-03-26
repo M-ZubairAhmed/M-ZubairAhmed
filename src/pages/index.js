@@ -14,10 +14,10 @@ export default ({ location, data }) => {
       title="Software Engineer"
       description="Personal website for M Zubair Ahmed"
       location={location}>
-      <section class="hero has-text-centered">
-        <div class="hero-body">
-          <h1 class="title is-1">Hi, I am M. Zubair Ahmed</h1>
-          <h2 class="subtitle is-1">
+      <section className="hero has-text-centered">
+        <div className="hero-body">
+          <h1 className="title is-1">Hi, I am M. Zubair Ahmed</h1>
+          <h2 className="subtitle is-1">
             <Emoji symbol="🤹🏽‍♂️"></Emoji> Software Engineer
           </h2>
           <hr />
@@ -37,7 +37,7 @@ export default ({ location, data }) => {
           </p>
         </div>
         <div className="hero-foot">
-          <div class="buttons is-centered">
+          <div className="buttons is-centered">
             {socialsEdges.map(({ node: { id, name, link, username } }) => (
               <a
                 key={id}

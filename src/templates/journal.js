@@ -37,12 +37,12 @@ export default ({ data, location }) => {
       meta={tags}
       coverPhoto={cover}
       path={path}>
-      <header class="hero is-medium">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">{title}</h1>
-            <h2 class="subtitle">{blogDate}</h2>
-            <h2 class="subtitle">
+      <header className="hero is-medium">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <h1 className="title">{title}</h1>
+            <h2 className="subtitle">{blogDate}</h2>
+            <h2 className="subtitle">
               {parseInt(timeToRead, 10) === 1
                 ? `${timeToRead} min read`
                 : `${timeToRead} mins read`}{' '}

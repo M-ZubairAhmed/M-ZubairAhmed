@@ -5,14 +5,14 @@ import App from '../app'
 import { Jumbotron } from '../common/components'
 
 const PhotosCard = ({ name = '', link = '', count = '' }) => (
-  <div class="card mb-3">
-    <div class="card-content">
-      <h3 class="title is-4">{name}</h3>
-      <div class="content">
+  <div className="card mb-3">
+    <div className="card-content">
+      <h3 className="title is-4">{name}</h3>
+      <div className="content">
         <p>{parseInt(count) === 1 ? `1 photo` : `${parseInt(count)} photos`}</p>
       </div>
     </div>
-    <div class="card-footer">
+    <div className="card-footer">
       <Link to={link} className="card-footer-item">
         View
       </Link>

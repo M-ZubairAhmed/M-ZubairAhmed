@@ -5,10 +5,10 @@ import App from '../app'
 
 export default () => (
   <App>
-    <section class="hero is-medium has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
+    <section className="hero is-medium has-text-centered">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
             Hey, i think you landed on a wrong page,
             <br />
             This page doesn't exists.

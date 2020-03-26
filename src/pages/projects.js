@@ -11,12 +11,12 @@ const ProjectCard = ({
   sourceCode = '',
   liveApp = '',
 }) => (
-  <div class="card mb-3">
-    <div class="card-content">
-      <h3 class="title is-4">{title}</h3>
-      <div class="content">
+  <div className="card mb-3">
+    <div className="card-content">
+      <h3 className="title is-4">{title}</h3>
+      <div className="content">
         <p>{description}</p>
-        <div class="breadcrumb is-small has-bullet-separator">
+        <div className="breadcrumb is-small has-bullet-separator">
           <ul>
             {tags.map((tag) => (
               <li key={tag}>
@@ -29,7 +29,7 @@ const ProjectCard = ({
         </div>
       </div>
     </div>
-    <div class="card-footer">
+    <div className="card-footer">
       <a href={sourceCode} className="card-footer-item" target="__blank">
         Source code
       </a>

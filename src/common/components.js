@@ -4,11 +4,11 @@ import { Link } from 'gatsby'
 import ThemeContext from './themeContext'
 
 export const Jumbotron = (props) => (
-  <header class="hero">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title is-1">{props.title}</h1>
-        <h2 class="subtitle is-4">{props.description}</h2>
+  <header className="hero">
+    <div className="hero-body">
+      <div className="container">
+        <h1 className="title is-1">{props.title}</h1>
+        <h2 className="subtitle is-4">{props.description}</h2>
       </div>
     </div>
   </header>
