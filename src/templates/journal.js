@@ -70,6 +70,7 @@ export default ({ data, location }) => {
           <a
             href={comments}
             target={'_blank'}
+            rel="noopener noreferrer"
             className="subtitle is-6 has-text-weight-thin">
             Comment on Twitter
           </a>
@@ -78,6 +79,7 @@ export default ({ data, location }) => {
           <a
             href={corrections}
             target={'_blank'}
+            rel="noopener noreferrer"
             className="subtitle is-6 has-text-weight-thin">
             {' '}
             - Edit on Github -{' '}
@@ -86,6 +88,7 @@ export default ({ data, location }) => {
         <a
           href={'https://github.com/M-ZubairAhmed/mzubairahmed.com/issues/new'}
           target={'_blank'}
+          rel="noopener noreferrer"
           className="subtitle is-6 has-text-weight-thin">
           Report an issue
         </a>

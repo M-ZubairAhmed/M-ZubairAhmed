@@ -32,7 +32,7 @@ export default ({ location, data }) => {
             <Emoji symbol="🔨"> </Emoji>wood working,{' '}
             <Emoji symbol="🏏"></Emoji>
             cricket.
-            <br />I often take <Emoji symbol="💻"></Emoji>client project on part
+            <br />I often take <Emoji symbol="💼"></Emoji>client project on part
             time basis.
           </p>
         </div>
