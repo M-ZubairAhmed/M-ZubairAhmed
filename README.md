@@ -4,7 +4,7 @@
   🤹🏽‍♂️ Software Engineer
 </h1>
 
-<h3 align="center">I am working on 💻frontend web development with Javascript and 📚learning backend web development with GoLang. I love contributing to 🌟 open source.
+<h3 align="center">I am working on 💻frontend web development with Javascript and 📚learning backend web development with Go and Rust. I love contributing to 🌟 open source.
 💗 Family is above everything else for me. My hobbies include 🚲cycling, 🔨wood working, 🏏cricket.</h3>
 
 ---
