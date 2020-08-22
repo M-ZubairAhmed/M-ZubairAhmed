@@ -21,6 +21,8 @@ comments: 'https://twitter.com/Mattermost/status/1296500558367424512'
 corrections: 'https://github.com/M-ZubairAhmed/M-ZubairAhmed/blob/master/src/data/posts/06-modern-ways-of-ui-end-to-end-testing-with-cypress/index.md'
 ---
 
+_This blog post was originally published in [Mattermost blog](https://mattermost.com/blog/modern-ways-of-end-to-end-testing-with-cypress-js/)_.
+
 ## Why write tests ?
 The ultimate goal of writing tests should be improving the user’s in-app experience and increasing developers’ confidence in shipping new or improved apps.
 
