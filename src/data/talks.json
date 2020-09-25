@@ -1,4 +1,11 @@
-[
+[{
+    "name": "How to contribute to large open source projects",
+    "host": "Coderplex community",
+    "date": "2020-9-18",
+    "slides": "",
+    "photos": "",
+    "link": "https://youtu.be/zIOwqDRbmgk"
+  },
   {
     "name": "Modern ways of end to end testing with Cypress",
     "host": "Vue Hyderabad",
