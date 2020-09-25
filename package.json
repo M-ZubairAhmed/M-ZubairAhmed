@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "gatsby develop",
-    "lint": "prettier --write src/**/*.{js,jsx}",
+    "lint": "prettier --write src/**/*.{js,jsx,json}",
     "build": "gatsby build",
     "start:prod": "gatsby serve"
   },
