@@ -1,10 +1,12 @@
-[{
+[
+  {
     "name": "How to contribute to large open source projects",
     "host": "Coderplex community",
     "date": "2020-9-18",
     "slides": "",
     "photos": "",
-    "link": "https://youtu.be/zIOwqDRbmgk"
+    "link": "https://www.meetup.com/coderplex/events/273165299/",
+    "video": "https://youtu.be/zIOwqDRbmgk"
   },
   {
     "name": "Modern ways of end to end testing with Cypress",
@@ -12,7 +14,8 @@
     "date": "2020-2-15",
     "slides": "/slides/vhf20-modern-ways-of-end-to-end-testing-with-cypress",
     "photos": "/photos/vhf20",
-    "link": "https://www.meetup.com/vue-hyderabad/events/268288016/"
+    "link": "https://www.meetup.com/vue-hyderabad/events/268288016/",
+    "video": ""
   },
   {
     "name": "Making Webpack Less Scary for React apps",
@@ -20,6 +23,7 @@
     "date": "2019-11-30",
     "slides": "/slides/ccn19-making-webpack-less-scary-for-react-apps",
     "photos": "/photos/ccn19",
-    "link": "https://www.meetup.com/coderplex/events/266721412/"
+    "link": "https://www.meetup.com/coderplex/events/266721412/",
+    "video": ""
   }
 ]

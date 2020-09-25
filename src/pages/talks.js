@@ -11,6 +11,7 @@ const TalkCard = ({
   link = '',
   photos = '',
   slides = '',
+  video = '',
 }) => (
   <div className="card mb-3">
     <div className="card-content">
@@ -22,12 +23,29 @@ const TalkCard = ({
     </div>
     <div className="card-footer">
       {link && (
-        <a href={link} className="card-footer-item" target="__blank">
+        <a
+          href={link}
+          className="card-footer-item"
+          target="__blank"
+          rel="noreferrer noopener">
           Link
         </a>
       )}
+      {video && (
+        <a
+          href={video}
+          className="card-footer-item"
+          target="__blank"
+          rel="noreferrer noopener">
+          Video
+        </a>
+      )}
       {photos && (
-        <Link to={photos} className="card-footer-item" target="__blank">
+        <Link
+          to={photos}
+          className="card-footer-item"
+          target="__blank"
+          rel="noreferrer noopener">
           Photos
         </Link>
       )}
@@ -76,6 +94,7 @@ export const pageQuery = graphql`
         link
         photos
         slides
+        video
       }
     }
   }

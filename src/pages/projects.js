@@ -30,11 +30,19 @@ const ProjectCard = ({
       </div>
     </div>
     <div className="card-footer">
-      <a href={sourceCode} className="card-footer-item" target="__blank">
+      <a
+        href={sourceCode}
+        className="card-footer-item"
+        target="__blank"
+        rel="noreferrer noopener">
         Source code
       </a>
       {liveApp && (
-        <a href={liveApp} className="card-footer-item" target="__blank">
+        <a
+          href={liveApp}
+          className="card-footer-item"
+          target="__blank"
+          rel="noreferrer noopener">
           Live app
         </a>
       )}
