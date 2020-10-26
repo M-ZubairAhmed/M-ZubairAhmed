@@ -18,7 +18,7 @@
     "description": "Blockchain based DApp for polling",
     "tags": ["Solidity", "Reactjs", "Blockchain","Ethereum"],
     "sourceCode": "https://github.com/M-ZubairAhmed/pdfpd-serverless",
-    "liveApp": "https://pdfdp.netlify.app"
+    "liveApp": ""
   },
   {
     "title": "Mattermost Plugin Netlify",
@@ -32,14 +32,14 @@
     "description": "App ideas to hack your next personal project for coming weekend.",
     "tags": ["Golang", "Reactjs"],
     "sourceCode": "https://github.com/M-ZubairAhmed/sardene-app",
-    "liveApp": "https://sardene.cf"
+    "liveApp": "https://sardene.netlify.app/"
   },
   {
     "title": "AtomURL",
     "description": "A fast and secure url shortener without trackers or adds. https://mzubairahmed.ml/blog/04-the-abort-able-fetch can be atomurl.ga/go/blog-fetch",
     "tags": ["Golang", "Reactjs"],
     "sourceCode": "https://github.com/M-ZubairAhmed/atomURL",
-    "liveApp": "https://atomurl.ga"
+    "liveApp": "https://atomurlapp.herokuapp.com/"
   },
   {
     "title": "Quiz in CLI",
