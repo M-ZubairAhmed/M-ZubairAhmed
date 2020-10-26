@@ -24,9 +24,9 @@ export default ({ location, data }) => {
           </h2>
           <hr />
           <p className="subtitle is-4">
-            I am a self taught computer engineer. Currently full time remote{' '}
-            <Emoji symbol="💻"></Emoji> Frontend Web developer and an inspiring{' '}
-            <Emoji symbol="🤖"></Emoji> Machine learning Engineer.
+            I am a self taught Software Engineer. Currently working as a full
+            time remote <Emoji symbol="💻"></Emoji> Frontend Web developer and
+            an aspiring <Emoji symbol="🤖"></Emoji> Machine learning Engineer.
             <br />
           </p>
         </div>
