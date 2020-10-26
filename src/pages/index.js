@@ -17,23 +17,17 @@ export default ({ location, data }) => {
       <section className="hero has-text-centered">
         <div className="hero-body">
           <h1 className="title is-1">Hi, I am M. Zubair Ahmed</h1>
+          <br />
           <h2 className="subtitle is-1">
-            <Emoji symbol="🤹🏽‍♂️"></Emoji> Software Engineer
+            <Emoji symbol="🤹🏽‍♂️"></Emoji> Software Engineer |{' '}
+            <Emoji symbol="🧩"></Emoji>Open Source Contributor
           </h2>
           <hr />
           <p className="subtitle is-4">
-            I am working on <Emoji symbol="💻"></Emoji>frontend web development
-            with Javascript and <Emoji symbol="📚"></Emoji>learning backend web
-            development with GoLang. I love contributing to{' '}
-            <Emoji symbol="🌟"></Emoji> open source.
+            I am a self taught computer engineer. Currently full time remote{' '}
+            <Emoji symbol="💻"></Emoji> Frontend Web developer and an inspiring{' '}
+            <Emoji symbol="🤖"></Emoji> Machine learning Engineer.
             <br />
-            <Emoji symbol="💗"></Emoji> Family is above everything else for me.
-            My hobbies include <Emoji symbol="🚲"></Emoji>cycling,{' '}
-            <Emoji symbol="🔨"> </Emoji>wood working,{' '}
-            <Emoji symbol="🏏"></Emoji>
-            cricket.
-            <br />I often take <Emoji symbol="💼"></Emoji>client project on part
-            time basis.
           </p>
         </div>
         <div className="hero-foot">
