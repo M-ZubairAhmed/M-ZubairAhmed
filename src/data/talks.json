@@ -1,4 +1,22 @@
 [
+    {
+    "name": "MatterCon 2021 Stars Panel",
+    "host": "Mattermost",
+    "date": "2021-06-24",
+    "slides": "https://docs.google.com/presentation/d/15UL4mW1-BGEzuYwSaYLnfRKysMHcq9fAJkZxzPOoHwo/edit?usp=sharing",
+    "photos": "",
+    "link": "https://reactday.in/",
+    "video": "https://youtu.be/i531aPwlVdY"
+  },
+   {
+    "name": "MatterCon 2021 Stars Panel",
+    "host": "Mattermost",
+    "date": "2021-06-24",
+    "slides": "",
+    "photos": "",
+    "link": "",
+    "video": "https://youtu.be/eWCXZIRm7iU"
+  },
   {
     "name": "Making a live contribution to an Open Source project",
     "host": "Coderplex community",
